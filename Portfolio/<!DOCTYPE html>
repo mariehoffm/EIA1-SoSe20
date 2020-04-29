@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+​
+<head>
+ <title>Maries Portfolio</title>
+</head>
+​
+<body>
+ <body style="background-color:LIGHTSEAGREEN">
+ <h1>Mein Portfolio</h1>
+ <h2>Bilder:</h2>
+ <h3>tolles Bild</h3>
+<a href="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/foto/foto1_big.jpg"><img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/foto/foto1.jpg"/></a>
+ <h3>besseres Bild</h3>
+ <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/foto/foto2.jpg">
+ <h3>noch ein Bild</h3>
+ <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/foto/foto3.jpg">
+ <h3>viertes Bild</h3>
+ <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/foto/foto4.jpg">
+ <h2>Videos:</h2>
+ <h3>schönes Video</h3>
+  <video controls>
+   <source src="GitHub/EIA1-SoSe20/Portfolio/clip1.mp4" type="video/mp4"> 
+   <source src="GitHub/EIA1-SoSe20/Portfolio/clip1.ogg" type="video/ogg">
+  </video>
+ <h3>anderes Video</h3>
+ <video controls>
+   <source src="GitHub/EIA1-SoSe20/Portfolio/clip2.mp4" type="video/mp4"> 
+   <source src="GitHub/EIA1-SoSe20/Portfolio/clip2.ogg" type="video/ogg">
+ </video>
+ <h3>drittes Video</h3>
+<video controls>
+   <source src="GitHub/EIA1-SoSe20/Portfolio/clip3.mp4" type="video/mp4"> 
+   <source src="GitHub/EIA1-SoSe20/Portfolio/clip3.ogg" type="video/ogg">
+ </video>
+ <h3>letztes Video</h3>
+ <video controls>
+   <source src="GitHub/EIA1-SoSe20/Portfolio/clip4.mp4" type="video/mp4"> 
+   <source src="GitHub/EIA1-SoSe20/Portfolio/clip4.ogg" type="video/ogg">
+ </video>
+ <h2>Grafiken:</h2>
+ <h3>Hip Hop</h3>
+  <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/grafikdesign/grafik1.jpg">
+ <h3>Travel and the creative mind</h3>
+  <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/grafikdesign/grafik2.jpg">
+ <h3>Grafik 3</h3>
+  <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/grafikdesign/grafik3.jpg">
+ <h3>Gabel</h3>
+  <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/grafikdesign/grafik4.jpg">
+</body>

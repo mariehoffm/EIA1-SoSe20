@@ -9,35 +9,31 @@
  <body style="background-color:LIGHTSEAGREEN">
  <h1>Mein Portfolio</h1>
  <h2>Bilder:</h2>
- <h3>tolles Bild</h3>
-<a href="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/foto/foto1_big.jpg"><img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/foto/foto1.jpg"/></a>
- <h3>besseres Bild</h3>
- <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/foto/foto2.jpg">
- <h3>noch ein Bild</h3>
- <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/foto/foto3.jpg">
- <h3>viertes Bild</h3>
- <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/foto/foto4.jpg">
+ <h3>khao sok national park</h3>+
+ <img src="Bild1">
+ <h3>new york</h3>
+ <img src="Bild2">
+ <h3>foiling</h3>
+ <img src="Bild3">
+ <h3>chapel in austria</h3>
+<img src="Bild4">
  <h2>Videos:</h2>
- <h3>schönes Video</h3>
-  <video controls>
-   <source src="GitHub/EIA1-SoSe20/Portfolio/clip1.mp4" type="video/mp4"> 
-   <source src="GitHub/EIA1-SoSe20/Portfolio/clip1.ogg" type="video/ogg">
-  </video>
- <h3>anderes Video</h3>
- <video controls>
-   <source src="GitHub/EIA1-SoSe20/Portfolio/clip2.mp4" type="video/mp4"> 
-   <source src="GitHub/EIA1-SoSe20/Portfolio/clip2.ogg" type="video/ogg">
- </video>
- <h3>drittes Video</h3>
-<video controls>
-   <source src="GitHub/EIA1-SoSe20/Portfolio/clip3.mp4" type="video/mp4"> 
-   <source src="GitHub/EIA1-SoSe20/Portfolio/clip3.ogg" type="video/ogg">
- </video>
- <h3>letztes Video</h3>
- <video controls>
-   <source src="GitHub/EIA1-SoSe20/Portfolio/clip4.mp4" type="video/mp4"> 
-   <source src="GitHub/EIA1-SoSe20/Portfolio/clip4.ogg" type="video/ogg">
- </video>
+ <h3>surfing festival in Kata beach, ภูเก็ต</h3>
+  <iframe
+   src="https://www.youtube.com/watch?v=4yUJMw2Cklg">
+  </iframe>
+ <h3>Foilcamp 2019 teaser</h3>
+ <iframe
+   src="https://www.youtube.com/watch?v=kJCnhV61mlM">
+  </iframe>
+ <h3>Shaper Marcus Tardrew telling you all about the Torpedo Faast Pro</h3>
+ <iframe
+   src="https://www.youtube.com/watch?v=64Y8znxZPXc">
+  </iframe>
+ <h3>cut lil festival at memories beach</h3>
+  <iframe
+   src="https://youtu.be/LE-K8cU57uM">
+  </iframe>
  <h2>Grafiken:</h2>
  <h3>Hip Hop</h3>
   <img src="https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L01/assets/grafikdesign/grafik1.jpg">

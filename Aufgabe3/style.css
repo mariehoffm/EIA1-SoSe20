@@ -10,14 +10,52 @@ video{
 h1{
     font-family: sans-serif;
 }
-#navbar{
-    background-color:rgba(255, 166, 0, 0.568);
+
+li a:hover {
+    color: hotpink;
+   }
+
+nav {
     padding: 10px 10px;
     position: fixed;
-    float: right;
     right: 0;
+  }
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color:rgba(255, 166, 0, 0.568);
+    border: 2px;
+    border-radius: 12px;
 }
-#navbar a:hover {
- background-color: rgb(252,26,28);
- color: white;
+
+nav li{
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
+
+
+nav li {
+    border-right: 2px solid red;
+  }
+nav li:last-child {
+    border-right: none;
+  }
+
+nav a:hover {
+    background-color: rgb(252,26,28);
+    color: white;
+ }
+
+nav li a{
+    padding: 14px 16px;
+    text-align: center;
+}
+
+#aktuell{
+    background-color: rgba(0, 255, 234, 0.739);
+} 

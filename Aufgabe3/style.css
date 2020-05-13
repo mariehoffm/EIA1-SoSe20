@@ -42,7 +42,7 @@ nav li{
 
 
 nav li {
-    border-right: 2px solid red;
+    border-right: 2px solid rgba(0, 255, 234, 0.739);
   }
 nav li:last-child {
     border-right: none;

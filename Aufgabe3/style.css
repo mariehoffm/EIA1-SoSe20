@@ -1,5 +1,7 @@
 body{
-    background-image: url("bg.png");
+    background-image: url("Kreis.png"), url("bg.png");
+    background-repeat: no-repeat, repeat;
+    background-position: top;
 }
 .media{
     width: 800px;
@@ -80,8 +82,8 @@ body {
 .button:hover {
     background-color: rgba(255, 105, 180, 0.561)}
 
-#header{
-    background: rgba(255, 105, 180, 0.561);
+#he1ader{
+    bac1kground: rgba(255, 105, 180, 0.561);
 }
 
 
@@ -129,3 +131,7 @@ input[type=text], select {
       color: red;
       font-size: larger;
   }
+
+#FotosVideos{
+    margin-top: 100px;
+} 

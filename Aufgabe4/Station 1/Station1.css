@@ -9,12 +9,12 @@ section{
     margin-right: auto;
     display: flex;
     position:relative;
-    background-color:none;
+    background-color;
 }
 
 section>.Karte{
-    height: 0px;
-    width: 0px;
+    height: auto;
+    width: auto;
     margin-top: 0px;
     margin-bottom: 0;
     margin-left: auto;

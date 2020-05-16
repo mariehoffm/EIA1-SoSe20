@@ -1,0 +1,59 @@
+
+
+
+img{
+    height: 400px;
+    width: 600px;
+    margin-top: 300px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.pingu{
+    position: absolute;
+    left: 530px;
+    top: 280px;
+    bottom: 0px;
+    right: 0px;
+    height: 100px;
+    width:100px;
+}
+
+.shell{
+    position: absolute;
+    left: 55px;
+    top: 280px;
+    bottom: 0px;
+    right: 530px;
+    width: 200px;
+    height: 142px;
+}
+
+.Willkommen{
+    position: absolute;
+    left: 250px;
+    top: 350px;
+    bottom: 0px;
+    right: 0px;
+    width: auto;
+    height: 142px;
+    color: white;
+}
+
+p{
+    position: absolute;
+    left: 220px;
+    top: 450px;
+    bottom: 0px;
+    right: 0px;
+    width: 500px;
+    height: 142px;
+    color: white;
+}
+
+
+body{
+    background-image: url("bg.png");
+}

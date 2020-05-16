@@ -1,6 +1,7 @@
 body{
     background-image: url("Kreis.png"), url("bg.png");
     background-repeat: no-repeat, repeat;
+    background-size: 200%, auto;
     background-position: top;
 }
 .media{

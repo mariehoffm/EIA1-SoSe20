@@ -1,7 +1,6 @@
 
 
-
-img{
+section{
     height: 400px;
     width: 600px;
     margin-top: 300px;
@@ -9,9 +8,22 @@ img{
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    position:relative;
+    background-color:none;
 }
 
-.pingu{
+section>.Karte{
+    height: 0px;
+    width: 0px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position:absolute;
+}
+
+section>.pingu{
     position: absolute;
     left: 530px;
     top: 280px;
@@ -21,20 +33,20 @@ img{
     width:100px;
 }
 
-.shell{
+section>.shell{
     position: absolute;
-    left: 55px;
+    left: -40px;
     top: 280px;
     bottom: 0px;
-    right: 530px;
+    right: 0px;
     width: 200px;
     height: 142px;
 }
 
-.Willkommen{
+section>.Willkommen{
     position: absolute;
-    left: 250px;
-    top: 350px;
+    left: 100px;
+    top: 50px;
     bottom: 0px;
     right: 0px;
     width: auto;
@@ -42,16 +54,17 @@ img{
     color: white;
 }
 
-p{
+section>.Text{
     position: absolute;
-    left: 220px;
-    top: 450px;
-    bottom: 0px;
+    left: 100px;
+    top: 160px;
+    bottom: 200px;
     right: 0px;
-    width: 500px;
+    width: 400px;
     height: 142px;
     color: white;
 }
+
 
 
 body{

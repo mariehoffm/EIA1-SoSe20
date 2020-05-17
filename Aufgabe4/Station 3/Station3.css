@@ -11,7 +11,7 @@ section{
 }
 
 @font-face {
-    font-family: myFirstFont, Arial, Helvetica, sans-serif;
+    font-family: myFirstFont;
     src: url(fonts/myfont-regular-webfont.woff), url(fonts/myfont-regular-webfont.woff2), url(fonts/Myfont-Regular.otf), url(fonts/Myfont-Regular.ttfs);
 
   }

@@ -11,8 +11,9 @@ section{
 }
 
 @font-face {
-    font-family: myFirstFont;
+    font-family: myFirstFont, Arial, Helvetica, sans-serif;
     src: url(fonts/myfont-regular-webfont.woff), url(fonts/myfont-regular-webfont.woff2), url(fonts/Myfont-Regular.otf), url(fonts/Myfont-Regular.ttfs);
+
   }
 
 p{
@@ -31,6 +32,7 @@ h1{
     margin: 50px;
     font-size: 40px;
 }
+
 
 
 body{

@@ -1,7 +1,6 @@
 
-body{
-    background-color:#fee6f3;
-}
+
+
 
 img{
   width: 400px;
@@ -17,4 +16,10 @@ img{
 body {
   font-family: myFirstFont;
   font-size: 20px;
+  max-width: 500px;
+  margin: auto;
+  background: #fee6f3;
+  padding: 10px;
 }
+
+

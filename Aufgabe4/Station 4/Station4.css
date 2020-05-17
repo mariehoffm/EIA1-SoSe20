@@ -36,4 +36,7 @@ input[type=text] {
       width: 200px;
   }
 
+  body{
+    background-image: url("bg.png");
+}
 

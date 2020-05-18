@@ -4,6 +4,17 @@ body{
     background-size: auto;
     background-position: top;
 }
+
+a {
+target-name:new;
+target-new:tab;
+}
+
+form{
+    width: 800px;
+    display: inline-block;
+}
+
 .media{
     width: 800px;
 }

@@ -6,8 +6,8 @@ body{
 }
 
 a {
-target-name:new;
-target-new:tab;
+    target-name: new;
+    target-new: tab;
 }
 
 form{

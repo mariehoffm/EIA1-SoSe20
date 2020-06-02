@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carbon Dioxide Emissions</title>
-    <script src="script.js"></script>
+    <script src="script.js" async></script>
     <link rel="stylesheet" href="Aufgabe5.css">
 </head>
 <body>
@@ -17,27 +17,38 @@
         <img src="asia.png" class="asia">
         <img src="australia.png" class="australia">
     </nav>
-    <h1>
-        Carbon Dioxide Emissions in Europe
+
+
+    <h1 id = "Ueberschrift">
+        Carbon Dioxide Emissions
     </h1>
+
+
+    <div class="chartWrapper">
+        <div class="chart"></div>
+    </div>
+
+ 
+   
+
     <main>
         <section>
             <h2 id = "absoluteEmmission">4209.3</h2>
-            <p>Emission absolute of Europe in 2018</p>
+            <p>Emission absolute in 2018</p>
         </section>
         
         <section>
-            <h2>4%</h2>
+            <h2 id = "relativeEmission">4%</h2>
             <p>Relative to total world's emission</p>
         </section>
         
         <section>
-            <h2>1.2%</h2>
+            <h2 id = "growthRate">1.2%</h2>
             <p>Growth rate between 2008 and 2018 (in %)</p>
         </section>
         
         <section>
-            <h2>-400</h2>
+            <h2 id = "absoluteGR">-400</h2>
             <p>Growth rate between 2008 and 2018 (absolute)</p>
         </section>
     </main>

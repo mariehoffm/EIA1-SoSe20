@@ -128,7 +128,7 @@ function myFunctionSouthamerica() {
     document.querySelector("#absoluteEmmission").innerHTML = absoluteEmissionSouthAmerica2018;
     document.querySelector("#relativeEmission").innerHTML = (absoluteEmissionSouthAmerica2018 / absoluteEmissionWorld2018) * 100 + " %";
     ;
-    document.querySelector("#growthRate").innerHTML = ((absoluteEmissionSouthAmericae2018 - absoluteEmissionSouthAmerica2008) / absoluteEmissionSouthAmerica2018) * 100 + " %";
+    document.querySelector("#growthRate").innerHTML = ((absoluteEmissionSouthAmerica2018 - absoluteEmissionSouthAmerica2008) / absoluteEmissionSouthAmerica2018) * 100 + " %";
     ;
     document.querySelector("#absoluteGR").innerHTML = (absoluteEmissionSouthAmerica2018 - absoluteEmissionSouthAmerica2008);
     ;

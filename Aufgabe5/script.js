@@ -106,7 +106,7 @@ function myFunctionEurope() {
     ;
     document.querySelector("#absoluteGR").innerHTML = (absoluteEmissionEurope2018 - absoluteEmissionEurope2008);
     ;
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 10%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 13%");
 }
 //das gleiche für North America:
 document.querySelector(".northamerica").addEventListener("click", myFunctionNorthamerica);
@@ -119,7 +119,7 @@ function myFunctionNorthamerica() {
     ;
     document.querySelector("#absoluteGR").innerHTML = (absoluteEmissionNorthAmerica2018 - absoluteEmissionNorthAmerica2008);
     ;
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 20%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 19%");
 }
 //das gleiche für South America:
 document.querySelector(".southamerica").addEventListener("click", myFunctionSouthamerica);
@@ -128,11 +128,11 @@ function myFunctionSouthamerica() {
     document.querySelector("#absoluteEmmission").innerHTML = absoluteEmissionSouthAmerica2018;
     document.querySelector("#relativeEmission").innerHTML = (absoluteEmissionSouthAmerica2018 / absoluteEmissionWorld2018) * 100 + " %";
     ;
-    document.querySelector("#growthRate").innerHTML = ((absoluteEmissionSouthAmerica2018 - absoluteEmissionSouthAmerica2008) / absoluteEmissionSouthAmerica2018) * 100 + " %";
+    document.querySelector("#growthRate").innerHTML = ((absoluteEmissionSouthAmericae2018 - absoluteEmissionSouthAmerica2008) / absoluteEmissionSouthAmerica2018) * 100 + " %";
     ;
     document.querySelector("#absoluteGR").innerHTML = (absoluteEmissionSouthAmerica2018 - absoluteEmissionSouthAmerica2008);
     ;
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 30%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 4%");
 }
 //das gleiche für Africa:
 document.querySelector(".africa").addEventListener("click", myFunctionAfrica);
@@ -145,7 +145,7 @@ function myFunctionAfrica() {
     ;
     document.querySelector("#absoluteGR").innerHTML = (absoluteEmissionAfrica2018 - absoluteEmissionAfrica2008);
     ;
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 30%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 3%");
 }
 //das gleiche für asia:
 document.querySelector(".asia").addEventListener("click", myFunctionAsia);
@@ -158,7 +158,7 @@ function myFunctionAsia() {
     ;
     document.querySelector("#absoluteGR").innerHTML = (absoluteEmissionAsia2018 - absoluteEmissionAsia2008);
     ;
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 40%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 52%");
 }
 //das gleiche für  australia:
 document.querySelector(".australia").addEventListener("click", myFunctionAustralia);
@@ -171,6 +171,6 @@ function myFunctionAustralia() {
     ;
     document.querySelector("#absoluteGR").innerHTML = (absoluteEmissionAustralia2018 - absoluteEmissionAustralia2008);
     ;
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 50%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 6%");
 }
 //# sourceMappingURL=script.js.map

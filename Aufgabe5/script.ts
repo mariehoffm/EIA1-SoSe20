@@ -123,7 +123,7 @@ function myFunctionEurope(){
     document.querySelector("#relativeEmission").innerHTML= (absoluteEmissionEurope2018 / absoluteEmissionWorld2018) *100 + " %");
     document.querySelector("#growthRate").innerHTML= ((absoluteEmissionEurope2018 - absoluteEmissionEurope2008) / absoluteEmissionEurope2018) * 100 + " %");
     document.querySelector("#absoluteGR").innerHTML= (absoluteEmissionEurope2018 - absoluteEmissionEurope2008));
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 10%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 13%");
 }
 
 //das gleiche für North America:
@@ -135,7 +135,7 @@ function myFunctionNorthamerica(){
     document.querySelector("#relativeEmission").innerHTML= (absoluteEmissionNorthAmerica2018 / absoluteEmissionWorld2018) *100 + " %");
     document.querySelector("#growthRate").innerHTML= ((absoluteEmissionNorthAmerica2018 - absoluteEmissionNorthAmerica2008) / absoluteEmissionNorthAmerica2018) * 100 + " %");
     document.querySelector("#absoluteGR").innerHTML= (absoluteEmissionNorthAmerica2018 - absoluteEmissionNorthAmerica2008));
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 20%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 19%");
 
 }
 
@@ -148,7 +148,7 @@ function myFunctionSouthamerica(){
     document.querySelector("#relativeEmission").innerHTML= (absoluteEmissionSouthAmerica2018 / absoluteEmissionWorld2018) *100 + " %");
     document.querySelector("#growthRate").innerHTML=((absoluteEmissionSouthAmericae2018 - absoluteEmissionSouthAmerica2008) / absoluteEmissionSouthAmerica2018) * 100 + " %");
     document.querySelector("#absoluteGR").innerHTML= (absoluteEmissionSouthAmerica2018 - absoluteEmissionSouthAmerica2008));
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 30%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 4%");
 }
 
 //das gleiche für Africa:
@@ -160,7 +160,7 @@ function myFunctionAfrica(){
     document.querySelector("#relativeEmission").innerHTML= (absoluteEmissionAfrica2018 / absoluteEmissionWorld2018) *100 + " %");
     document.querySelector("#growthRate").innerHTML=((absoluteEmissionAfrica2018 - absoluteEmissionAfrica2008) / absoluteEmissionAfrica2018) * 100 + " %");
     document.querySelector("#absoluteGR").innerHTML= (absoluteEmissionAfrica2018 - absoluteEmissionAfrica2008));
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 30%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 3%");
 
 }
 
@@ -173,7 +173,7 @@ function myFunctionAsia(){
     document.querySelector("#relativeEmission").innerHTML= (absoluteEmissionAsia2018 / absoluteEmissionWorld2018) *100 + " %");
     document.querySelector("#growthRate").innerHTML=((absoluteEmissionAsia2018 - absoluteEmissionAsia2008) / absoluteEmissionAsia2018) * 100 + " %");
     document.querySelector("#absoluteGR").innerHTML= (absoluteEmissionAsia2018 - absoluteEmissionAsia2008));
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 40%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 52%");
 }
 
 //das gleiche für  australia:
@@ -185,6 +185,6 @@ function myFunctionAustralia(){
     document.querySelector("#relativeEmission").innerHTML= (absoluteEmissionAustralia2018 / absoluteEmissionWorld2018) *100 + " %");
     document.querySelector("#growthRate").innerHTML=((absoluteEmissionAustralia2018 - absoluteEmissionAustralia2008) / absoluteEmissionAustralia2018) * 100 + " %");
     document.querySelector("#absoluteGR").innerHTML= (absoluteEmissionAustralia2018 - absoluteEmissionAustralia2008));
-    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 50%");
+    document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 6%");
 
 }

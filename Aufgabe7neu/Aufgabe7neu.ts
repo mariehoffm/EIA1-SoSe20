@@ -1,5 +1,5 @@
 
-var allSounds = ["A.mp3.webarchive", "C.mp3.webarchive", "F.mp3.webarchive", "G.mp3.webarchive", "hihat.mp3.webarchive", "kick.mp3.webarchive", "laugh-1.mp3.webarchive", "laugh-2.mp3.webarchive", "snare.mp3.webarchive"];
+var allSounds = ["A.mp3", "C.mp3", "F.mp3", "G.mp3", "hihat.mp3", "kick.mp3", "laugh-1.mp3", "laugh-2.mp3", "snare.mp3"];
 
 document.querySelector("#button1").addEventListener("click", function() {playSample(0);});
 document.querySelector("#button2").addEventListener("click", function() {playSample(1);});

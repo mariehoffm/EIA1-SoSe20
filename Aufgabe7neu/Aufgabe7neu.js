@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 var allSounds = ["A.mp3.webarchive", "C.mp3.webarchive", "F.mp3.webarchive", "G.mp3.webarchive", "hihat.mp3.webarchive", "kick.mp3.webarchive", "laugh-1.mp3.webarchive", "laugh-2.mp3.webarchive", "snare.mp3.webarchive"];
 document.querySelector("#button1").addEventListener("click", function () { playSample(0); });
 document.querySelector("#button2").addEventListener("click", function () { playSample(1); });
@@ -16,11 +16,11 @@ function playSample(Button_Nummer) {
     sound.play(sound);
 }
 //zweiter Aufgabenteil:
-var DrumMachineSample = ["hihat.mp3.webarchive", "kick.mp3.webarchive", "snare.mp3.webarchive"];
-document.querySelector("#playbutton").addEventListener("click"), DrumMachineSample;
-setInterval(function (DrumMachineSample) {
+var BeatSound = ["hihat.mp3.webarchive", "kick.mp3.webarchive", "snare.mp3.webarchive"];
+document.querySelector("#playbutton").addEventListener("click"), myFunctionplayBeat;
+setInterval(function (myFunctionplayBeat) {
     alert("NKNK");
-    sound = new Audio(DrumMachineSample);
+    sound = new Audio(BeatSound);
     sound.play(sound);
 }, 500);
 //# sourceMappingURL=Aufgabe7neu.js.map

@@ -1,0 +1,28 @@
+
+button{
+    background-color:  #ff33ff;
+    text-align: center;
+    padding: 150px 150px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #114477;
+  }
+
+
+.sound1{
+    volume: 
+}
+
+body {
+    text-align: center;
+}
+
+img{
+    background-color: #ff33ff;
+}
+
+img:hover {
+    background-color: #114477;
+  }

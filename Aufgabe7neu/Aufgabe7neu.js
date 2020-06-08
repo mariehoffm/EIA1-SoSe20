@@ -10,16 +10,25 @@ document.querySelector("#button7").addEventListener("click", function () { playS
 document.querySelector("#button8").addEventListener("click", function () { playSample(7); });
 document.querySelector("#button9").addEventListener("click", function () { playSample(8); });
 function playSample(Button_Nummer) {
-    //window.alert("Hello world!");//bin ich in der Funktion angekommen?
-    //window.alert(Button_Nummer);//Nummer anzeigen
-    sound = new Audio(allSounds[Button_Nummer]); // mache aus der Datei ein Audio (was genau das ist weiß ich nicht aber sonst spielt das nicht ab)
+    //window.alert("Hello world!");
+    //window.alert(Button_Nummer);
+    sound = new Audio(allSounds[Button_Nummer]);
     sound.play(sound);
 }
-//zweiter Aufgabenteil:
-var Lied = ["kick.mp3", "snare.mp3", "hihat.mp3"];
-document.querySelector("#playbutton").addEventListener("click", function () { DrumMachine(Lied); });
+//  ---------- 2. Teil ----------
+var Lied01 = ["kick.mp3", "snare.mp3", "hihat.mp3"];
+document.querySelector("#playbutton").addEventListener("click", function () { DrumMachine(Lied01); });
 function DrumMachine(Lied) {
-    //window.alert("kqwflmlef"); //funktioniert
-    sound.play(sound);
+    var Sample = new Audio(), i = 0;
+    Sample.addEventListener('ended', function () {
+        i = ++i < Lied.length ? i : 0;
+        console.log(i);
+        Sample.src = Lied[i];
+        Sample.play();
+    }, true);
+    Sample.volume = 0.5;
+    Sample.loop = false;
+    Sample.src = Lied[0];
+    Sample.play();
 }
 //# sourceMappingURL=Aufgabe7neu.js.map

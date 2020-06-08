@@ -21,14 +21,12 @@ function playSample(Button_Nummer) {
 
 
   //zweiter Aufgabenteil:
-  var DrumMachineSample = ["hihat.mp3", "kick.mp3","snare.mp3"];
+var Lied = ["kick.mp3", "snare.mp3", "hihat.mp3"];
+ 
+document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied);});
 
-  document.querySelector("#playbutton").addEventListener("click", function () {DrumMachineSample}) ;
-  
-  
-  setInterval(function DrumMachineSample (){ 
-      //alert("NKNK");
-      sound = new Audio(DrumMachineSample);
-      sound.play(sound);
-  }, 500);
+function DrumMachine (Lied) {
+  //window.alert("kqwflmlef"); //funktioniert
+  sound.play(sound);
+}
 

@@ -16,11 +16,10 @@ function playSample(Button_Nummer) {
     sound.play(sound);
 }
 //zweiter Aufgabenteil:
-var DrumMachineSample = ["hihat.mp3", "kick.mp3", "snare.mp3"];
-document.querySelector("#playbutton").addEventListener("click", function () { DrumMachineSample; });
-setInterval(function DrumMachineSample() {
-    //alert("NKNK");
-    sound = new Audio(DrumMachineSample);
+var Lied = ["kick.mp3", "snare.mp3", "hihat.mp3"];
+document.querySelector("#playbutton").addEventListener("click", function () { DrumMachine(Lied); });
+function DrumMachine(Lied) {
+    //window.alert("kqwflmlef"); //funktioniert
     sound.play(sound);
-}, 500);
+}
 //# sourceMappingURL=Aufgabe7neu.js.map

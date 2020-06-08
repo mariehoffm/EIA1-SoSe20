@@ -19,10 +19,10 @@ body {
     text-align: center;
 }
 
-img{
+#playbutton{
     background-color: #ff33ff;
 }
 
-img:hover {
+#playbutton:hover {
     background-color: #114477;
   }

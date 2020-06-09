@@ -16,19 +16,55 @@ function playSample(Button_Nummer) {
     sound.play(sound);
 }
 //  ---------- 2. Teil ----------
-var Lied01 = ["kick.mp3", "snare.mp3", "hihat.mp3"];
-document.querySelector("#playbutton").addEventListener("click", function () { DrumMachine(Lied01); });
+//viel zu schnelL: 
+/*
 function DrumMachine(Lied) {
-    var Sample = new Audio(), i = 0;
-    Sample.addEventListener('ended', function () {
-        i = ++i < Lied.length ? i : 0;
-        console.log(i);
-        Sample.src = Lied[i];
-        Sample.play();
-    }, true);
-    Sample.volume = 0.5;
-    Sample.loop = false;
-    Sample.src = Lied[0];
-    Sample.play();
+
+    //window.alert(anzahl);
+    setInterval(function() {
+    var anzahl = Lied.length;
+    var i = 0;
+        do {
+            //console.log(Lied[i]);
+            //window.alert(Lied[i]);
+            var Sample = new Audio(Lied[i]);
+            Sample.play();
+            i++;
+            }
+        while (i < anzahl);
+
+    }, 2000); //mach die while-Schleife alle 2 Sekunden
 }
+/*
+
+
+//geht:
+var Lied01 = ["kick.mp3", "snare.mp3", "hihat.mp3"];
+document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied01);});
+
+
+
+
+function DrumMachine(Lied) {
+
+  var Sample = new Audio(),
+      i = 0;
+    Sample.addEventListener('ended', function () {
+      i = ++i < Lied.length ? i : 0;
+      console.log(i)
+      Sample.src = Lied[i];
+      Sample.play();
+    }, true);
+  Sample.volume = 0.5;
+  Sample.loop = false;
+  Sample.src = Lied[0];
+  Sample.play();
+  }
+
+
+
+
+  
+
+ 
 //# sourceMappingURL=Aufgabe7neu.js.map

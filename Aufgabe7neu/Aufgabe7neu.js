@@ -1,4 +1,4 @@
-//"use strict";
+"use strict";
 var allSounds = ["A.mp3", "C.mp3", "F.mp3", "G.mp3", "hihat.mp3", "kick.mp3", "laugh-1.mp3", "laugh-2.mp3", "snare.mp3"];
 document.querySelector("#button1").addEventListener("click", function () { playSample(0); });
 document.querySelector("#button2").addEventListener("click", function () { playSample(1); });
@@ -27,5 +27,6 @@ function DrumMachine(Lied) {
             var Sample = new Audio(Lied[i]);
             Sample.play();
         }
-    }, 2000); 
+    }, 2000);
 }
+//# sourceMappingURL=Aufgabe7neu.js.map

@@ -42,7 +42,7 @@ var i: number = 0;
 
 
 
-
+//inspiriert von Gabriel Rausch :)
 
 
   

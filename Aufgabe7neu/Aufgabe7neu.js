@@ -27,4 +27,5 @@ function DrumMachine(Lied) {
     }, 500);
 }
 var i = 0;
+//inspiriert von Gabriel Rausch :)
 //# sourceMappingURL=Aufgabe7neu.js.map

@@ -18,6 +18,7 @@ function playSample(Button_Nummer) {
 var Lied01 = ["kick.mp3", "snare.mp3", "hihat.mp3"];
 document.querySelector("#playbutton").addEventListener("click", function () { DrumMachine(Lied01); });
 function DrumMachine(Lied) {
+    var i = 0;
     //window.alert(anzahl);
     setInterval(function () {
         var Sample = new Audio(Lied[i]);
@@ -26,6 +27,5 @@ function DrumMachine(Lied) {
         i++; //i=i+1
     }, 500);
 }
-var i = 0;
 //inspiriert von Gabriel Rausch :)
 //# sourceMappingURL=Aufgabe7neu.js.map

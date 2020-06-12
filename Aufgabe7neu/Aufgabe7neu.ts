@@ -29,6 +29,7 @@ document.querySelector("#playbutton").addEventListener("click", function() {Drum
 
 
 function DrumMachine(Lied) { 
+	var i: number = 0;
 	//window.alert(anzahl);
 	setInterval(function() {
 		var Sample = new Audio(Lied[i]);
@@ -38,7 +39,6 @@ function DrumMachine(Lied) {
 	}, 500); 
 } 
 
-var i: number = 0;
 
 
 

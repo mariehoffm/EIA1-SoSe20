@@ -15,8 +15,8 @@ document.querySelector("#button9").addEventListener("click", function() {playSam
 function playSample(Button_Nummer) { 
     //window.alert("Hello world!");
     //window.alert(Button_Nummer);
-    sound = new Audio(allSounds[Button_Nummer]);
-    sound.play(sound);
+    var sound = new Audio(allSounds[Button_Nummer]);
+    sound.play();
   } 
 
 
@@ -31,14 +31,15 @@ document.querySelector("#playbutton").addEventListener("click", function() {Drum
 function DrumMachine(Lied) { 
 	//window.alert(anzahl);
 	setInterval(function() {
-	var anzahl = Lied.length;
-	let i;
-	for ( i=0; i<anzahl; i++ ) {
 		var Sample = new Audio(Lied[i]);
 		Sample.play();
-	}
-	}, 2000); 
+		console.log(Lied[i]);
+		i++; //i=i+1
+	}, 500); 
 } 
+
+var i: number = 0;
+
 
 
 

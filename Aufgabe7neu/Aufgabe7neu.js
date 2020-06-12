@@ -1,4 +1,3 @@
-"use strict";
 var allSounds = ["A.mp3", "C.mp3", "F.mp3", "G.mp3", "hihat.mp3", "kick.mp3", "laugh-1.mp3", "laugh-2.mp3", "snare.mp3"];
 document.querySelector("#button1").addEventListener("click", function () { playSample(0); });
 document.querySelector("#button2").addEventListener("click", function () { playSample(1); });
@@ -12,8 +11,8 @@ document.querySelector("#button9").addEventListener("click", function () { playS
 function playSample(Button_Nummer) {
     //window.alert("Hello world!");
     //window.alert(Button_Nummer);
-    sound = new Audio(allSounds[Button_Nummer]);
-    sound.play(sound);
+    var sound = new Audio(allSounds[Button_Nummer]);
+    sound.play();
 }
 //  ---------- 2. Teil ----------
 var Lied01 = ["kick.mp3", "snare.mp3", "hihat.mp3"];
@@ -21,12 +20,11 @@ document.querySelector("#playbutton").addEventListener("click", function () { Dr
 function DrumMachine(Lied) {
     //window.alert(anzahl);
     setInterval(function () {
-        var anzahl = Lied.length;
-        let i;
-        for (i = 0; i < anzahl; i++) {
-            var Sample = new Audio(Lied[i]);
-            Sample.play();
-        }
-    }, 2000);
+        var Sample = new Audio(Lied[i]);
+        Sample.play();
+        console.log(Lied[i]);
+        i++; //i=i+1
+    }, 500);
 }
+var i = 0;
 //# sourceMappingURL=Aufgabe7neu.js.map

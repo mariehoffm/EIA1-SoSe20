@@ -1,0 +1,37 @@
+
+button{
+    background-color:  #ff33ff;
+    text-align: center;
+    padding: 150px 150px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #114477;
+  }
+
+
+.sound1{
+    volume: 
+}
+
+body {
+    text-align: center;
+}
+
+#playbutton{
+    background-color: #ff33ff;
+}
+
+#playbutton:hover {
+    background-color: #114477;
+  }
+
+
+.UntererButton{
+    background-color: red;
+}
+
+.UntererButton.geklickt{
+    background-color: blue;
+}

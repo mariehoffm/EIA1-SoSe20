@@ -21,81 +21,31 @@ function playSample(Button_Nummer) {
 
 
 
-
-
 //  ---------- playbutton ----------
-var Lied = ["kick.mp3", "snare.mp3", "hihat.mp3", "hihat.mp3"];
-//document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied);});
-document.querySelector("#playbutton").addEventListener("click", function() {blub(Lied);});
+var Lied = ["kick.mp3", "snare.mp3", "hihat.mp3"];
+
+document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied,10);});
 
 
 
+function DrumMachine(Lied,loopAnzahl) { 
+	if(loopAnzahl !=""){console.log(loopAnzahl);}//  anzahl der loops
+	//Inhalt des arrays um das "loopAnzahl"-fache vervielfachen:
+	var Lied_einfach = Lied;
+	for (let i = 1;  i < loopAnzahl;  i++) {
+		Lied = Lied.concat(Lied_einfach);//das Array Lied mit dem Inhalt des array Lied also mit sich selbst um das "loopAnzahl"-fache erweitern
+		console.log(i);
+	}
+	console.log("Anzahl Sounds" + Lied.length);//(10 * kick.mp3,snare.mp3,hihat.mp3)
 
-function DrumMachine(Lied) { 
-	var i: number = 0;
-	setInterval(function() {
+//jetzt den Taktgeber starten um das array in 500ms(pro Sound) zu durchlaufen:	
+	var i = 0;
+	let Takt = setInterval(function() {
 		var Sample = new Audio(Lied[i]);
 		Sample.play();
-		//console.log(Lied[i]);
+		Sample.currentTime = 0;
+		console.log(Lied[i]);
+		if(i==Lied.length-1){clearInterval(Takt);}//wenn alle Sounds aus dem array Lied gespielt --> Taktgeber stoppen ansonsten Überforderung
 		i++; //i=i+1
-	}, 500);
-	return;
+	}, 500); 
 } 
-
-function blub (Lied){
-	for ( var j = 0; j < 3; j++) {
-		DrumMachine(Lied);
-	}
-}
-// alle Töne 3 mal gespielt. Wie gehts hintereinander?
-
-
-
-//Pause und Stop button:
-
-var UntererButton: HTMLElement = document.querySelector("playbutton");
-
-if (UntererButton.getAttribute ("geklickt") == ("geklickt")) {
-	UntererButton.setAttribute ("class", " ");
-} else {
-	UntererButton.setAttribute ("class", "geklickt");
-}
-
-
-
-
-
-
-
-
-/*
-//var i: number = 0;
-
-var playlistTotal: number = 2;
-
-
-
-
-
-for (var i: number = 0;  i <= playlistTotal;  i++) {
-	function DrumMachine(Lied) { 
-		var i: number = 0;
-		setInterval(function() {
-			var Sample = new Audio(Lied[i]);
-			Sample.play();
-			console.log(Lied[i]);
-			if (i <=  2) {
-				return true;
-			}
-			else {
-				i++;
-			}
-		}, 500); 
-	} 
-}
-
-//Problem: der macht unenedlich i++, wenn also noch mehr töne drin wären würde er die alle abspielen. Wie lasse ich es beim dritten Ton stoppen ?
-*/
-
-
-

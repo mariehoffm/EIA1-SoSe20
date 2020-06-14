@@ -27,11 +27,3 @@ body {
     background-color: #114477;
   }
 
-
-.UntererButton{
-    background-color: red;
-}
-
-.UntererButton.geklickt{
-    background-color: blue;
-}

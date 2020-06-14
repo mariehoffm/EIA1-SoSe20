@@ -1,13 +1,13 @@
 
 button{
-    background-color:  #ff33ff;
+    background-color:   #4744447c;
     text-align: center;
     padding: 150px 150px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #114477;
+    background-color:  #a35ec3;
   }
 
 
@@ -17,13 +17,14 @@ button:hover {
 
 body {
     text-align: center;
+    background-color:  #000000;
 }
 
 #playbutton{
-    background-color: #ff33ff;
+    background-color: #000000;
 }
 
 #playbutton:hover {
-    background-color: #114477;
+    background-color: #a35ec3;
   }
 

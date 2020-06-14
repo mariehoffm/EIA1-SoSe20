@@ -22,9 +22,9 @@ function DrumMachine(Lied, loopAnzahl) {
         console.log(loopAnzahl);
     } //  anzahl der loops
     //Inhalt des arrays um das "loopAnzahl"-fache vervielfachen:
-    var Lied_einfach = Lied;
+    var Beat = Lied;
     for (var i_1 = 1; i_1 < loopAnzahl; i_1++) {
-        Lied = Lied.concat(Lied_einfach); //das Array Lied mit dem Inhalt des array Lied also mit sich selbst um das "loopAnzahl"-fache erweitern
+        Lied = Lied.concat(Beat); //das Array Lied mit dem Inhalt des array Lied also mit sich selbst um das "loopAnzahl"-fache erweitern
         console.log(i_1);
     }
     console.log("Anzahl Sounds" + Lied.length); //(10 * kick.mp3,snare.mp3,hihat.mp3)

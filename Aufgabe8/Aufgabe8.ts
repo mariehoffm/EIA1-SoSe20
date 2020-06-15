@@ -24,13 +24,13 @@ function playSample(Button_Nummer) {
 //  ---------- playbutton ----------
 var Lied = ["kick.mp3", "snare.mp3", "hihat.mp3"];
 
-document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied,10);});
+document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied,10, if, waskommthierhin?);});
 
 var functionIsRunning: boolean = false; //--> erster Versuch
 var btn:HTMLElement = document.querySelector("#playbutton");
 
 
-function DrumMachine(Lied,loopAnzahl) { 
+function DrumMachine(Lied,loopAnzahl, waskommthierhin?) { 
 //loop machen:
 	if(loopAnzahl !=""){console.log(loopAnzahl);}//  anzahl der loops
 	//Inhalt des arrays um das "loopAnzahl"-fache vervielfachen:
@@ -56,22 +56,23 @@ function DrumMachine(Lied,loopAnzahl) {
 
 	if (functionIsRunning == true) {
 		//function MachineSample play
-		Lied.play();
+		document.querySelector("#playbutton").addEventListener("click", Lied.pause());
+		alert("knewg") //wird nicht angezeigt :(
 		
 	} if (functionIsRunning == false) {
-		Lied.pause();
+		document.querySelector("#playbutton").addEventListener("click", Lied.play());
 	}
 	
 
 }
 
-//WIESO GEHT DAS NICHT OMG
+//WIESO GEHT DAS NICHT OMG, das müsste doch funktionieren mit functionIsRunning menno
 
 
 
 
 //activ und nicht activ für design:
-var btn:HTMLElement = document.querySelector("button");
+var btn: HTMLElement = document.querySelector("button");
 
 if (btn.getAttribute("class") == "active"){
 	btn. setAttribute("class", "");
@@ -81,10 +82,18 @@ if (btn.getAttribute("class") == "active"){
 
 
 
+
+//delete button:
+document.querySelector("#delete").addEventListener("click", function() {DrumMachine;});
+
+
+
+
+
 	/* 
 	erster Versuch:
 	//play pause button (if: sound spielt dann pause button, else: playbutton)
-	if (functionIsRunning = false) { //nur ein = weil sonst gehts nicht ?!
+	if (functionIsRunning = false) { 
 		alert("funktioniert!") //geht
 		document.querySelector("#playbutton").addEventListener("click", //DrumMachine deaktivieren);
 	}

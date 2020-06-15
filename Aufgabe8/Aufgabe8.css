@@ -28,13 +28,18 @@ body {
     background-color: #a35ec3;
   }
 
+  #playbutton.active{
+    background-color: #00ff00;
+    text-align: center;
+    padding: 150px 150px;
+    cursor: pointer;
+}
+
 #playbutton{
-    background: red;
-
+    background-color: #ff0000;
+    text-align: center;
+    padding: 150px 150px;
+    cursor: pointer;
 }
 
-#playbutton.active{
-    background: blue;
-}
-
-//wie ändere ich das blau und rot in die beiden Bilder ??
+//wie ändere ich das grün und rot in die beiden Bilder ??

@@ -16,11 +16,10 @@ function playSample(Button_Nummer) {
 }
 //  ---------- playbutton ----------
 var Lied = ["kick.mp3", "snare.mp3", "hihat.mp3"];
-document.querySelector("#playbutton").addEventListener("click", function () { DrumMachine(Lied, 10); if (, waskommthierhin ?  : )
-    ; });
+document.querySelector("#playbutton").addEventListener("click", function () { DrumMachine(Lied, 10); });
 var functionIsRunning = false; //--> erster Versuch
 var btn = document.querySelector("#playbutton");
-function DrumMachine(Lied, loopAnzahl, waskommthierhin) {
+function DrumMachine(Lied, loopAnzahl) {
     //loop machen:
     if (loopAnzahl != "") {
         console.log(loopAnzahl);
@@ -56,15 +55,18 @@ function DrumMachine(Lied, loopAnzahl, waskommthierhin) {
 }
 //WIESO GEHT DAS NICHT OMG, das müsste doch funktionieren mit functionIsRunning menno
 //activ und nicht activ für design:
-var btn = document.querySelector("button");
-if (btn.getAttribute("class") == "active") {
-    btn.setAttribute("class", "");
+var btn = document.querySelector("#playbutton");
+if (btn.classList.contains("active")) {
+    btn.classList.remove("active");
 }
 else {
-    btn.setAttribute("class", "active");
+    btn.classList.add("active");
 }
 //delete button:
-document.querySelector("#delete").addEventListener("click", function () { DrumMachine; });
+document.querySelector("#delete").addEventListener("click", function () { DeleteSample; });
+function DeleteSample() {
+    // var Lied löschen
+}
 /*
 erster Versuch:
 //play pause button (if: sound spielt dann pause button, else: playbutton)

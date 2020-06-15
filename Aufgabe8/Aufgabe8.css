@@ -1,6 +1,6 @@
 
 button{
-    background-color:   #4744447c;
+    //background-color:   #4744447c;
     text-align: center;
     padding: 150px 150px;
     cursor: pointer;
@@ -17,14 +17,24 @@ button:hover {
 
 body {
     text-align: center;
-    background-color:  #000000;
+    background-color:  white;
 }
 
 #playbutton{
-    background-color: #000000;
+    background-color: #00000078;
 }
 
 #playbutton:hover {
     background-color: #a35ec3;
   }
 
+#playbutton{
+    background: red;
+
+}
+
+#playbutton.active{
+    background: blue;
+}
+
+//wie ändere ich das blau und rot in die beiden Bilder ??

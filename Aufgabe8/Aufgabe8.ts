@@ -26,9 +26,12 @@ var Lied = ["kick.mp3", "snare.mp3", "hihat.mp3"];
 
 document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied,10);});
 
+var functionIsRunning: boolean = false; //--> erster Versuch
+var btn:HTMLElement = document.querySelector("#playbutton");
 
 
 function DrumMachine(Lied,loopAnzahl) { 
+//loop machen:
 	if(loopAnzahl !=""){console.log(loopAnzahl);}//  anzahl der loops
 	//Inhalt des arrays um das "loopAnzahl"-fache vervielfachen:
 	var Beat = Lied;
@@ -38,14 +41,62 @@ function DrumMachine(Lied,loopAnzahl) {
 	}
 	console.log("Anzahl Sounds" + Lied.length);//(10 * kick.mp3,snare.mp3,hihat.mp3)
 
-//jetzt den Taktgeber starten um das array in 500ms(pro Sound) zu durchlaufen:	
+//Taktgeber starten um das array in 500ms(pro Sound) zu durchlaufen:	
 	var i = 0;
-	let Takt = setInterval(function() {
+	var Takt = setInterval(function() {
 		var Sample = new Audio(Lied[i]);
 		Sample.play();
+		var functionIsRunning: boolean = true; //Lied läuft!, erster Versuch
 		Sample.currentTime = 0;
 		console.log(Lied[i]);
 		if(i==Lied.length-1){clearInterval(Takt);}//wenn alle Sounds aus dem array Lied gespielt --> Taktgeber stoppen ansonsten Überforderung
 		i++; //i=i+1
 	}, 500); 
-} 
+
+
+	if (functionIsRunning == true) {
+		//function MachineSample play
+		Lied.play();
+		
+	} if (functionIsRunning == false) {
+		Lied.pause();
+	}
+	
+
+}
+
+//WIESO GEHT DAS NICHT OMG
+
+
+
+
+//activ und nicht activ für design:
+var btn:HTMLElement = document.querySelector("button");
+
+if (btn.getAttribute("class") == "active"){
+	btn. setAttribute("class", "");
+} else{
+	btn.setAttribute("class", "active");
+}
+
+
+
+	/* 
+	erster Versuch:
+	//play pause button (if: sound spielt dann pause button, else: playbutton)
+	if (functionIsRunning = false) { //nur ein = weil sonst gehts nicht ?!
+		alert("funktioniert!") //geht
+		document.querySelector("#playbutton").addEventListener("click", //DrumMachine deaktivieren);
+	}
+	else {
+		document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied,10);});
+	
+	}
+	} 
+	//Problem: Sample.play ist nicht global deklariert also kann nicht drauf zugreifen, wenn ich aber die if else lokal mache ist direkt error und gar nix geht
+	
+
+
+
+
+*/

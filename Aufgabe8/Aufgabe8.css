@@ -80,4 +80,29 @@ body {
     background-color: #114477;
   }
 
+  #deletebutton{
+    background-color:  #ff33ff;
+    text-align: center;
+    padding: 150px 150px;
+    cursor: pointer;
+}
+
+#deletebutton:before{
+    font-family: 'FontAwesome';
+    font-size:5em;
+    content: "\f1f8"
+}
+
+#recordbutton{
+    background-color:  #ff33ff;
+    text-align: center;
+    padding: 150px 150px;
+    cursor: pointer;
+}
+
+#recordbutton:before{
+    font-family: 'FontAwesome';
+    font-size:5em;
+    content: "\f130"
+}
 

@@ -7,7 +7,6 @@ document.querySelector("#button1").addEventListener("click", function () { playS
 document.querySelector("#button2").addEventListener("click", function () { playSample(1); });
 document.querySelector("#button3").addEventListener("click", function () { playSample(2); });
 document.querySelector("#button4").addEventListener("click", function () { playSample(3); });
-document.querySelector("#button5").addEventListener("click", function () { playSample(4); });
 document.querySelector("#button6").addEventListener("click", function () { playSample(5); });
 document.querySelector("#button7").addEventListener("click", function () { playSample(6); });
 document.querySelector("#button8").addEventListener("click", function () { playSample(7); });
@@ -20,8 +19,8 @@ function playSample(Button_Nummer) {
 }
 //  ---------- 2. Teil ----------
 // ein Array anlegen mit der gewünschten Sounds:
-//var Lied01 = ['kick.mp3', 'snare.mp3', 'hihat.mp3'];
-var Lied01 = allSounds;
+var Lied01 = ['kick.mp3', 'snare.mp3', 'hihat.mp3'];
+//var Lied01 = allSounds;
 // das html Dokument überwachen ob da ein click auf dem Button playbutton ausgelöst wird um dann die Funktion "DrumMachine" auszuführen, der ich gleich die "Playlist" Beat01:
 document.querySelector("#playbutton").addEventListener("click", function () { DrumMachine(Lied01, 4); });
 //Teil3 Button
@@ -104,7 +103,45 @@ function DrumMachine(Lied, loopAnzahl) {
     // ...Taktgeber und Player Ende
 }
 //wenn click auf record button --> record = true --> in der DrumMachine function --> wenn auf button 1,2,3,.. gedrückt: hinten in neues record array rein
+/*
+var Recording = [''];
+
+document.querySelector("#recordbutton").addEventListener("click", function() {Record();});
+
+function () Record{
+    if ("#recordbutton".onclick){
+    if ("#button1".onclick){
+        Recording.push(allSounds[0]);
+    if ("#button2".onclick){
+        Recording.push(allSounds[1]);
+    }
+    Recording.play();
+}
+}
+
+
+
+
+
+/*
+document.querySelector("#recordbutton").addEventListener("click", function() {Record();});
+
+var Recording = [''];
+
+function() Record{
+    if recording = true;
+}
+
+if (recording == true) {
+    function () DrumMachine{
+        Recording.push('button'.'onclick')
+    }
+} else {
+
+}
+
 // wenn clik on delete button --> array record löschen
+
 /*delete button:
 document.querySelector("#delete").addEventListener("click", function () { DeleteSample; });
 function DeleteSample() {

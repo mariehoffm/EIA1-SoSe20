@@ -1,13 +1,66 @@
-
 button{
-    //background-color:   #4744447c;
+    background-color:  #ff33ff;
+    text-align: center;
+    padding: 150px 150px;
+    cursor: pointer;
+    content: "\f04b"
+}
+
+#playbutton2{
+    background-color: #00ff00;
     text-align: center;
     padding: 150px 150px;
     cursor: pointer;
 }
 
+#playbutton2:before{
+    font-family: 'FontAwesome';
+    font-size:5em;
+    content: "\f04b";
+}
+
+
+#playbutton2.play{
+    background-color: #00ff00;
+    text-align: center;
+    padding: 150px 150px;
+    cursor: pointer;
+}
+
+#playbutton2.play:before{
+    font-family: 'FontAwesome';
+    font-size:5em;
+    content: "\f04b";
+}
+
+
+#playbutton2.pause{
+    background-color: #ff0000;
+    text-align: center;
+    padding: 150px 150px;
+    cursor: pointer;
+}
+#playbutton2.pause:before{
+    font-family: 'FontAwesome';
+    font-size:5em;
+    content: '\f04c';
+}
+
+#playbutton2.stop{
+    background-color: #ff0000;
+    text-align: center;
+    padding: 150px 150px;
+    cursor: pointer;
+}
+
+#playbutton2.stop:before{
+    font-family: 'FontAwesome';
+    font-size:5em;
+    content: "\f04d"
+}
+
 button:hover {
-    background-color:  #a35ec3;
+    background-color: #114477;
   }
 
 
@@ -17,29 +70,14 @@ button:hover {
 
 body {
     text-align: center;
-    background-color:  white;
 }
 
 #playbutton{
-    background-color: #00000078;
+    background-color: #ff33ff;
 }
 
 #playbutton:hover {
-    background-color: #a35ec3;
+    background-color: #114477;
   }
 
-  #playbutton.active{
-    background-color: #00ff00;
-    text-align: center;
-    padding: 150px 150px;
-    cursor: pointer;
-}
 
-#playbutton{
-    background-color: #ff0000;
-    text-align: center;
-    padding: 150px 150px;
-    cursor: pointer;
-}
-
-//wie ändere ich das grün und rot in die beiden Bilder ??

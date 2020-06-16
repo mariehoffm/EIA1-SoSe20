@@ -57,8 +57,8 @@ function DrumMachine(Lied,loopAnzahl) {
 
 	if (functionIsRunning == true) {
 		//function MachineSample play
-		document.querySelector("#playbutton").addEventListener("click", Lied.pause());
 		alert("knewg") //wird nicht angezeigt :(
+		document.querySelector("#playbutton").addEventListener("click", Lied.pause());
 		
 	} if (functionIsRunning == false) {
 		document.querySelector("#playbutton").addEventListener("click", Lied.play());
@@ -66,8 +66,7 @@ function DrumMachine(Lied,loopAnzahl) {
 	
 
 }
-
-//WIESO GEHT DAS NICHT OMG, das müsste doch funktionieren mit functionIsRunning menno
+//xxxxxxxxxxxxxx ERROR: das müsste doch funktionieren mit functionIsRunning menno, wieso wird der alert nicht einmal ausgelesen ??
 
 
 //activ und nicht activ für design:
@@ -78,7 +77,7 @@ if (btn.classList.contains ("active")) {
 } else {
 	btn.classList.add("active");
 }
-
+//xxxxxxxxxxxxxx ERROR: wie kann ich statt der Farbe das icon ändern, geht das überhaupt mit CSS??
 
 
 

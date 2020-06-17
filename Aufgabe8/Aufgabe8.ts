@@ -22,7 +22,35 @@ function playSample(Button_Nummer) {
     //window.alert("Hello world!");//bin ich in der Funktion angekommen?
     //window.alert(Button_Nummer);//Nummer anzeigen
     var sound = new Audio(allSounds[Button_Nummer]);// mache aus der Datei ein Audio (idk genau das ist aber sonst spiel das nicht ab)
-    sound.play();
+	sound.play();
+	if (isRecording = true){
+		if ("#button1".onclick) {
+			Lied01.push(allSounds[0]);
+			console.log();
+		}
+		if ("#button2".onclick) {
+			Lied01.push(allSounds[1]); 
+		}
+		if ("#button3".onclick) {
+			Lied01.push(allSounds[2]);
+		}
+		if ("#button4".onclick) {
+			Lied01.push(allSounds[3]);
+		}
+		if ("#button5".onclick) {
+			Lied01.push(allSounds[4]);
+		}
+		if ("#button6".onclick) {
+			Lied01.push(allSounds[5]);
+		}
+		if ("#button7".onclick) {
+			Lied01.push(allSounds[6]);
+		}
+		if ("#button8".onclick) {
+			Lied01.push(allSounds[7]);
+		}
+		}
+	//recording true dann recording function aufrufen  XXXXXXXX
   } 
 
 //  ---------- 2. Teil ----------
@@ -32,7 +60,7 @@ var Lied01 = ['kick.mp3', 'snare.mp3', 'hihat.mp3'];
 //var Lied01 = allSounds;
 // das html Dokument überwachen ob da ein click auf dem Button playbutton ausgelöst wird um dann die Funktion "DrumMachine" auszuführen, der ich gleich die "Playlist" Beat01:
 
-document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied01,4);});
+//document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied01,4);});
 
 
 
@@ -54,21 +82,75 @@ console.log('geladen!');// -> geladen!
 });
 
 
+//DELETE BUTTON
+document.querySelector("#deletebutton").addEventListener("click", function() {DeletePlaylist();});
+function DeletePlaylist(){
+	Lied01.length = 0;
+}
+
+//record button: KOMM NICHT WEITER WIESO GEHT DAS NICHT IJÜLWQGMÜOJWENGPIENÜVPKÜPQEOJN
+
+//var Recording: string[] = [""];
+
+document.querySelector("#recordbutton").addEventListener("click", function () {RecordingFunction(); });
+
+//var isRecording: boolean = false;
+
+function RecordingFunction {
+	var isRecording: boolean = true;
+	if (isRecording == true) {
+		if ("#button1".onclick) {
+			Recording.push(allSounds[0]);
+		}
+		if ("#button2".onclick) {
+			Recording.push(allSounds[1]); 
+		}
+		if ("#button3".onclick) {
+			Recording.push(allSounds[2]);
+		}
+		if ("#button4".onclick) {
+			Recording.push(allSounds[3]);
+		}
+		if ("#button5".onclick) {
+			Recording.push(allSounds[4]);
+		}
+		if ("#button6".onclick) {
+			Recording.push(allSounds[5]);
+		}
+		if ("#button7".onclick) {
+			Recording.push(allSounds[6]);
+		}
+		if ("#button8".onclick) {
+			Recording.push(allSounds[7]);
+		}
+	} 
+
+//wenn jetzt click auf play kommt spielt es das array:
+	if ("#playbutton2".onclick) { //wenn man ein zweites Mal drauf klickt
+		Recording.play();
+	}
+}
+//Schleife ja nicht weil soll ja nicht einfach ablaufen sondern nur bei click..
+
+
+
 
 
 function DrumMachine(Lied,loopAnzahl) { 
 
 // den Button verändern Anfang...
 var btn = document.querySelector('#playbutton2');
-if(btn.getAttribute('class') == 'play'){// wenn Status play
-//	btn.setAttribute('class','pause');//dann auf status pause ändern weil Player läuft schon
-	btn.setAttribute('class','stop');//dann auf status stop ändern weil Player läuft schon
+if(btn.getAttribute('class') == 'play'){// wenn Klasse play
+//	btn.setAttribute('class','pause');//dann auf Klasse auf pause ändern weil Player läuft schon
+	btn.setAttribute('class','stop');//dann auf Klasse stop ändern weil Player läuft schon
 	functionIsRunning = true;//player hat keine Freigabe zum Start
 }else{
-//	btn.setAttribute('class','pause');//ansonsten status play setzen
-	btn.setAttribute('class','stop');//ansonsten status play setzen
+//	btn.setAttribute('class','pause');//ansonsten Klasse play setzen
+	btn.setAttribute('class','stop');//ansonsten Klasse play setzen
 	functionIsRunning = false;//player hat Freigabe zum Start
 }
+
+
 
 //btn.setAttribute('class','pause');// playbutton2 bekommt die Klasse (#playbutton2.pause) zugewiesen
 btn.setAttribute('class','stop');// playbutton2 bekommt die Klasse (#playbutton2.stop) zugewiesen

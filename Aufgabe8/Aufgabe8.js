@@ -67,7 +67,7 @@ var isRecording = false;
 window.addEventListener('load', function () {
     console.log('geladen!'); // -> funktioniert
     //var btn:HTMLElement = document.querySelector('playbutton2');
-    var btn = document.querySelector('#playbutton2');
+    var btn = document.querySelector('#playbutton');
     // wenn dem playbutton2 keine klasse zugeordnet ist bekommt er Klasse play (#playbutton2.play)
     if (btn.getAttribute('class') != 'play') { // wenn der Button beim Laden der Seite nicht die Klasse #playbutton2.play, dann bekommt er sie jetzt
         btn.setAttribute('class', 'play'); // #playbutton2.play (Farbe grün)

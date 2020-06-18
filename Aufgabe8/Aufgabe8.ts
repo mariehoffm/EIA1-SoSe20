@@ -10,7 +10,7 @@ document.querySelector("#button1").addEventListener("click", function() {playSam
 document.querySelector("#button2").addEventListener("click", function() {playSample(1);});
 document.querySelector("#button3").addEventListener("click", function() {playSample(2);});
 document.querySelector("#button4").addEventListener("click", function() {playSample(3);});
-
+document.querySelector("#button5").addEventListener("click", function() {playSample(4);});
 document.querySelector("#button6").addEventListener("click", function() {playSample(5);});
 document.querySelector("#button7").addEventListener("click", function() {playSample(6);});
 document.querySelector("#button8").addEventListener("click", function() {playSample(7);});
@@ -23,35 +23,41 @@ function playSample(Button_Nummer) {
     //window.alert(Button_Nummer);//Nummer anzeigen
     var sound = new Audio(allSounds[Button_Nummer]);// mache aus der Datei ein Audio (idk genau das ist aber sonst spiel das nicht ab)
 	sound.play();
-	if (isRecording = true){
-		if ("#button1".onclick) {
-			Lied01.push(allSounds[0]);
-			console.log();
-		}
-		if ("#button2".onclick) {
-			Lied01.push(allSounds[1]); 
-		}
-		if ("#button3".onclick) {
-			Lied01.push(allSounds[2]);
-		}
-		if ("#button4".onclick) {
-			Lied01.push(allSounds[3]);
-		}
-		if ("#button5".onclick) {
-			Lied01.push(allSounds[4]);
-		}
-		if ("#button6".onclick) {
-			Lied01.push(allSounds[5]);
-		}
-		if ("#button7".onclick) {
-			Lied01.push(allSounds[6]);
-		}
-		if ("#button8".onclick) {
-			Lied01.push(allSounds[7]);
-		}
-		}
-	//recording true dann recording function aufrufen  XXXXXXXX
-  } 
+
+	if (isRecording == true) {// wenn der Aufnahmebutton geclickt wurde + Button ist  rot...isRecording und Button-Design Toggle aus funktion Recording
+		console.log('Sample: ' + sound.src);// mit sound.src bekommt man Name des Samples
+		Lied01.push(sound.src);// ins array Lied01 immer hinten anhängen
+	}
+
+
+/* if (isRecording = true) {
+	if ("#button1".onclick) {
+		Lied01.push(allSounds[0]);
+		console.log(allSounds[0]);
+	}
+	if ("#button2".onclick) {
+		Lied01.push(allSounds[1]);
+	}
+	if ("#button3".onclick) {
+		Lied01.push(allSounds[2]);
+	}
+	if ("#button4".onclick) {
+		Lied01.push(allSounds[3]);
+	}
+	if ("#button5".onclick) {
+		Lied01.push(allSounds[4]);
+	}
+	if ("#button6".onclick) {
+		Lied01.push(allSounds[5]);
+	}
+	if ("#button7".onclick) {
+		Lied01.push(allSounds[6]);
+	}
+	if ("#button8".onclick) {
+		Lied01.push(allSounds[7]);
+	}
+} */
+} 
 
 //  ---------- 2. Teil ----------
 
@@ -60,18 +66,25 @@ var Lied01 = ['kick.mp3', 'snare.mp3', 'hihat.mp3'];
 //var Lied01 = allSounds;
 // das html Dokument überwachen ob da ein click auf dem Button playbutton ausgelöst wird um dann die Funktion "DrumMachine" auszuführen, der ich gleich die "Playlist" Beat01:
 
-//document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied01,4);});
+document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied01,4);});
+document.querySelector("#deletebutton").addEventListener("click", function() {DeletePlaylist();});
+document.querySelector("#recordbutton").addEventListener("click", function() {Recording();});
+
+
+function DeletePlaylist(){
+	Lied01.length = 0;
+}
 
 
 
 //Teil3 Button
-document.querySelector("#playbutton2").addEventListener("click", function() {DrumMachine(Lied01,4);});
 var functionIsRunning = true;
-var aktuellesSample = 0;//number braucht man nur wenn man Pause einbauen möchte, ist aber nicht gefordert
+//var aktuellesSample = 0;//number braucht man nur für Pause 
+var isRecording = false;
 
 
 window.addEventListener('load', function() {
-console.log('geladen!');// -> geladen!
+console.log('geladen!');// -> funktioniert
 	//var btn:HTMLElement = document.querySelector('playbutton2');
 	var btn = document.querySelector('#playbutton2');
 
@@ -81,7 +94,86 @@ console.log('geladen!');// -> geladen!
 	}
 });
 
+// beim Laden der Seite dem rocordbutton die css klasse notrecording zuweisen (gelb)
+var btnrec = document.querySelector('#recordbutton');
+// wenn dem recordbutton keine klasse zugeordnet ist bekommt er Klasse play (#recordbutton.play)
+if(btnrec.getAttribute('class') != 'notrecording'){// wenn der Button beim Laden der Seite nicht die Klasse #recordbutton.recording, dann bekommt er sie jetzt
+	btnrec.setAttribute('class','notrecording');// #recordbutton.recording (Farbe grün)
+}
 
+//keyboardsteuerung start
+//Lösung gefunden hier: https://developer.mozilla.org/en-US/docs/Web/API/Document/keypress_event
+window.addEventListener('keypress', logKey);
+function logKey(e) {
+	 console.log(e.code)// durch beliebiges drücken einer Taste sieht man in der Browserkonsole den Key (Digit1, Space, Backspace usw...)
+
+switch (e.code) {
+	case 'Digit1':
+		playSample(0);
+		break;
+	case 'Digit2':
+		playSample(1);
+		break;
+	case 'Digit3':
+		playSample(2);
+		break;
+	case 'Digit4':
+		playSample(3);
+		break;
+	case 'Digit5':
+		playSample(4);
+		break;
+	case 'Digit6':
+		playSample(5);
+		break;
+	case 'Digit7':
+		playSample(6);
+		break;
+	case 'Digit8':
+		playSample(7);
+		break;
+	case 'Digit9':
+		playSample(8);
+		break;
+	case 'Space':
+		DrumMachine(Lied01,4);
+		break;
+	case 'Backspace':
+		DeletePlaylist();
+		break;
+	case 'KeyR':
+		Recording();
+		break;
+	case 'KeyH':
+		alert('Taste 1-9 steuert Button 1-9 \nLeertaste startet oder stoppt den PlayButton\nDie Backspace-Taste löscht die Playlist\nTaste R startet oder stoppt die Aufnahme');
+		break;
+	  }
+}
+
+
+
+};//keyboardsteuerung ende
+
+
+});// window.addEventListener bei load Ende
+
+
+function Recording(){
+	//isRecording und Button-Design Toggle
+	var btn = document.querySelector('#recordbutton');
+	if(btn.getAttribute('class') == 'notrecording'){// wenn css klasse = notrecording
+		btn.setAttribute('class','recording');//dann wechseln auf recording
+		isRecording = true;//Aufnahme hat Freigabe zum Aufzeichnen
+		console.log('Aufnahme gestartet');
+	}else{
+		btn.setAttribute('class','notrecording');//ansonsten status play setzen
+		isRecording = false;//player hat Freigabe zum Start
+		console.log('Aufnahme gestoppt');
+	}
+}
+
+
+/*
 //DELETE BUTTON
 document.querySelector("#deletebutton").addEventListener("click", function() {DeletePlaylist();});
 function DeletePlaylist(){
@@ -132,14 +224,14 @@ function RecordingFunction {
 }
 //Schleife ja nicht weil soll ja nicht einfach ablaufen sondern nur bei click..
 
-
+*/
 
 
 
 function DrumMachine(Lied,loopAnzahl) { 
 
 // den Button verändern Anfang...
-var btn = document.querySelector('#playbutton2');
+var btn = document.querySelector('#playbutton');
 if(btn.getAttribute('class') == 'play'){// wenn Klasse play
 //	btn.setAttribute('class','pause');//dann auf Klasse auf pause ändern weil Player läuft schon
 	btn.setAttribute('class','stop');//dann auf Klasse stop ändern weil Player läuft schon

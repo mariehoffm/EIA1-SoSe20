@@ -1,59 +1,98 @@
 button{
     background-color:  #ff33ff;
     text-align: center;
-    padding: 150px 150px;
+    padding: 100px 100px;
     cursor: pointer;
-    content: "\f04b"
 }
 
-#playbutton2{
+#deletebutton{
+    background-color:  #ff33ff;
+    text-align: center;
+    padding: 100px 100px;
+    cursor: pointer;
+}
+
+#deletebutton:before{
+    font-family: 'FontAwesome';
+    font-size:5em;
+    content: "\f1f8"
+}
+
+#recordbutton{
+    background-color:  #e0ff33;
+    text-align: center;
+    padding: 100px 100px;
+    cursor: pointer;
+}
+
+#recordbutton.notrecording{
+    background-color:  #e0ff33;
+    text-align: center;
+    padding: 100px 100px;
+    cursor: pointer;
+}
+
+#recordbutton.recording{
+    background-color:  #ff3333;
+    text-align: center;
+    padding: 100px 100px;
+    cursor: pointer;
+}
+
+#recordbutton:before{
+    font-family: 'FontAwesome';
+    font-size:5em;
+    content: "\f130"
+}
+
+#playbutton{
     background-color: #00ff00;
     text-align: center;
-    padding: 150px 150px;
+    padding: 100px 100px;
     cursor: pointer;
 }
 
-#playbutton2:before{
+#playbutton:before{
     font-family: 'FontAwesome';
     font-size:5em;
     content: "\f04b";
 }
 
 
-#playbutton2.play{
+#playbutton.play{
     background-color: #00ff00;
     text-align: center;
-    padding: 150px 150px;
+    padding: 100px 100px;
     cursor: pointer;
 }
 
-#playbutton2.play:before{
+#playbutton.play:before{
     font-family: 'FontAwesome';
     font-size:5em;
     content: "\f04b";
 }
 
 
-#playbutton2.pause{
+#playbutton.pause{
     background-color: #ff0000;
     text-align: center;
-    padding: 150px 150px;
+    padding: 100px 100px;
     cursor: pointer;
 }
-#playbutton2.pause:before{
+#playbutton.pause:before{
     font-family: 'FontAwesome';
     font-size:5em;
     content: '\f04c';
 }
 
-#playbutton2.stop{
+#playbutton.stop{
     background-color: #ff0000;
     text-align: center;
-    padding: 150px 150px;
+    padding: 100px 100px;
     cursor: pointer;
 }
 
-#playbutton2.stop:before{
+#playbutton.stop:before{
     font-family: 'FontAwesome';
     font-size:5em;
     content: "\f04d"
@@ -80,29 +119,18 @@ body {
     background-color: #114477;
   }
 
-  #deletebutton{
-    background-color:  #ff33ff;
-    text-align: center;
-    padding: 150px 150px;
-    cursor: pointer;
+#deletebutton{
+    background-color: #ff33ff;
 }
 
-#deletebutton:before{
-    font-family: 'FontAwesome';
-    font-size:5em;
-    content: "\f1f8"
-}
+#deletebutton:hover {
+    background-color: #114477;
+  }
 
 #recordbutton{
-    background-color:  #ff33ff;
-    text-align: center;
-    padding: 150px 150px;
-    cursor: pointer;
+    background-color: #ff33ff;
 }
 
-#recordbutton:before{
-    font-family: 'FontAwesome';
-    font-size:5em;
-    content: "\f130"
-}
-
+#recordbutton:hover {
+    background-color: #114477;
+  }

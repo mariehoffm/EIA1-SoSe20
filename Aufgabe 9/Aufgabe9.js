@@ -4,10 +4,11 @@ var TaskList = ["task1", "task2"];
 //console.log(input.value) //geht nicht omg why
 document.querySelector("#addTaskButton").addEventListener("click", function () { ListeBitte(); });
 function ListeBitte() {
-    var x = document.getElementById("addTaskButton").value; //value = x
-    document.getElementById("ausgabe").innerHTML = x; //value wird in der liste "ausgabe" ausgegeben
+    var x = document.getElementById("input").value;
+    document.getElementById("ausgabe").innerHTML = x;
 }
-/*
+/* GEHT ALLES NICHT:
+
 function ListeBitte(){
     if (document.form.input.value != "") {
         //dann in Array anhängen mit .push

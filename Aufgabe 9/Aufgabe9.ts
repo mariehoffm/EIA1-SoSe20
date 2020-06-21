@@ -1,32 +1,42 @@
 
 
-const TaskList: string [] = ["task1", "task2"];
+var TaskList: string [] = ["task1", "task2"];
+
+//Aus dem Array eine ungeordnete Liste machen:
+var list = document.createElement('ul');
+
+// Create a list item for each pups
+// and append it to the list
+TaskList.forEach(function (pups) {
+	var li = document.createElement('li');
+	li.textContent = pups;
+	list.appendChild(li);
+});
+
+var app = document.querySelector('#pupu');
+app.appendChild(list);
+
+//document.getElementById("ausgabe").innerHTML = TaskList; // geht nicht.....
 
 
-document.getElementById("ausgabe").innerHTML = TaskList; // geht nicht.....
 
-
-//Array soll als Liste auf der Webseite zu sehen sein
-
+//AUFGABE: Array soll als Liste auf der Webseite zu sehen sein --> ja
 document.querySelector("button").addEventListener("click", myFunctionListe);
 
 function myFunctionListe(){
     //alert("test"); //--> funktioniert !!
     let task = document.getElementById("input").value;
     alert(task); // --> funktioniert auch omg
-    //jetzt hinten ans array dran:
-    //TaskList.push(task); //WHY???? macht no sinn
 }
+//wie mach ich das jetzt noch als hübsche liste und nicht so in einer reihe ?
 
-
-
-//AUFGABE: Zahl der ToDos anzeigen (Listenlänge)
-document.getElementById("dieliste").innerHTML = TaskList.length; //--> funktioniert!
+//AUFGABE: Zahl der ToDos anzeigen (Listenlänge) --> ja
+document.getElementById("dieliste").innerHTML = TaskList.length + " tasks in total"; //--> funktioniert!
 
 
 //AUFGABE: Eingabe in Textfeld soll dem Array hinten hinzugefügt werden (bei click auf addTask bzw enter-Taste)
 if ("#addTaskButton".onclick) {
-    TaskList.push(task); //WHY???? macht no sinn
+    TaskList.push(task); //WIESO GEHT DAS NICHT ?
 
 }
 

@@ -1,4 +1,3 @@
-"use strict";
 var absoluteEmissionAfrica2018 = 1235.5;
 var absoluteEmissionSouthAmerica2018 = 1261.5;
 var absoluteEmissionEurope2018 = 4209.3;

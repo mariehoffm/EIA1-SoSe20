@@ -1,0 +1,6 @@
+
+
+#deletebutton:before{
+    font-family: 'FontAwesome';
+    content: "\f014";
+}

@@ -1,8 +1,8 @@
-var TaskList = ["task1", "task2"];
+var TaskList = [];
 //Aus dem Array eine ungeordnete Liste machen:
 var list = document.createElement('ul');
-// Create a list item for each pups
-// and append it to the list
+// eine Liste für jedes pups machen
+// und hinten an liste anhängen
 TaskList.forEach(function (pups) {
     var li = document.createElement('li');
     li.textContent = pups;
@@ -10,19 +10,38 @@ TaskList.forEach(function (pups) {
 });
 var app = document.querySelector('#pupu');
 app.appendChild(list);
-//document.getElementById("ausgabe").innerHTML = TaskList; // geht nicht.....
 //AUFGABE: Array soll als Liste auf der Webseite zu sehen sein --> ja
 document.querySelector("button").addEventListener("click", myFunctionListe);
 function myFunctionListe() {
     //alert("test"); //--> funktioniert !!
     var task = document.getElementById("input").value;
-    alert(task); // --> funktioniert auch omg
+    //alert(task); // --> funktioniert auch omg
+    //jetzt hinten ans array dran:
+    TaskList.push(task);
+    //alert("huhu: "+TaskList);//funktioniert 
+    //JETZT: als Liste anzeigen statt komma aufzählung XXXXXXXXX
+    document.getElementById("ausgabe").innerHTML = TaskList; // undefined
+    //document.getElementById("ausgabe").innerHTML = TaskList[0]; // undefined
+    //document.getElementById("ausgabe").innerHTML = TaskList[1]; // undefined
+    //document.getElementById("ausgabe").innerHTML = TaskList[2]; //wird angezeigt
+    //for (let i: number = 0;  i < TaskList;  i++) {
+    //   document.getElementById("ausgabe").innerHTML = TaskList[i]; //GEHT AUCH NICHT 
+    // console.log(TaskList[i]);
+    //}
+    //AUFGABE: Zahl der ToDos anzeigen (Listenlänge) --> ja
+    document.getElementById("dieliste").innerHTML = TaskList.length + " in total"; //--> funktioniert   
 }
-//wie mach ich das jetzt noch als hübsche liste und nicht so in einer reihe ?
-//AUFGABE: Zahl der ToDos anzeigen (Listenlänge) --> ja
-document.getElementById("dieliste").innerHTML = TaskList.length + " tasks in total"; //--> funktioniert!
-//AUFGABE: Eingabe in Textfeld soll dem Array hinten hinzugefügt werden (bei click auf addTask bzw enter-Taste)
-if ("#addTaskButton".onclick) {
-    TaskList.push(task); //WIESO GEHT DAS NICHT ?
-}
+//DANN: wenn neues array element hinzugefüht wird kommen trash button und check mark direkt mit.. XXXXXXXXX
+/*
+   for (let i = 0; i < TaskList.length; i++) {
+        console.log(TaskList[i]);
+     }
+
+
+    let i: number = 0;	// Zählervariable auserhalb der Schleife definieren
+    do {
+        console.log(TaskList[i]);
+        i++;
+    } while (i < TaskList) // Die Bedingung nach dem Codeblock
+*/
 //# sourceMappingURL=Aufgabe9.js.map

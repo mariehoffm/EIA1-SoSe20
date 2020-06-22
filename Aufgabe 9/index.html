@@ -11,14 +11,14 @@
 <body>
     <h1>To Do App:</h1>
 
-    <div id="dieliste">    </div>
-	<form id="form">
-        <!--<input type="radio" id="done" name="Checkbox"> 
-        <label for="done">done</label>-->
+    <div id="dieliste">    </div> 
+	<form id="form" onsubmit="return false">
+        <input type="radio" id="done" name="Checkbox"> 
+        <label for="done">done</label>
         <input type="text" id="input" size="40" placeholder="new Task"> <!--hier kann man neues To Do reinschreiben -->
         <button id="addTaskButton">add task!</button>
-        <!--<button id = "deletebutton">  </button>
-        <ul id = "ausgabe" >hallo?</ul> -->
+        <button id = "deletebutton">  </button> 
+        <li id = "ausgabe" ></li>
         <div id="pupu"></div>
 	</form>
 
@@ -27,3 +27,4 @@
 </html>
 
  <!--<i class="fa fa-trash fa-5x"></i>-->
+ 

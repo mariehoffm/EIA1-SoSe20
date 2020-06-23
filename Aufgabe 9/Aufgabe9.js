@@ -19,19 +19,19 @@ function myFunctionListe() {
     //jetzt hinten ans array dran:
     TaskList.push(task);
     //alert("huhu: "+TaskList);//funktioniert 
-    //JETZT: als Liste anzeigen statt komma aufzählung XXXXXXXXX
-    document.getElementById("ausgabe").innerHTML = TaskList; // undefined
+    //JETZT: als Liste anzeigen statt komma aufzählung XXXXXXXXXXXXXXXXXXXXXXXXXXX
+    document.getElementById("ausgabe").innerHTML = TaskList;
     //document.getElementById("ausgabe").innerHTML = TaskList[0]; // undefined
     //document.getElementById("ausgabe").innerHTML = TaskList[1]; // undefined
     //document.getElementById("ausgabe").innerHTML = TaskList[2]; //wird angezeigt
-    //for (let i: number = 0;  i < TaskList;  i++) {
-    //   document.getElementById("ausgabe").innerHTML = TaskList[i]; //GEHT AUCH NICHT 
-    // console.log(TaskList[i]);
-    //}
+    for (var i = 0; i < TaskList; i++) {
+        document.getElementById("ausgabe").innerHTML = TaskList[i]; //GEHT AUCH NICHT 
+        console.log(TaskList[i]);
+    }
     //AUFGABE: Zahl der ToDos anzeigen (Listenlänge) --> ja
     document.getElementById("dieliste").innerHTML = TaskList.length + " in total"; //--> funktioniert   
 }
-//DANN: wenn neues array element hinzugefüht wird kommen trash button und check mark direkt mit.. XXXXXXXXX
+//DANN: wenn neues array element hinzugefüht wird kommen trash button und check mark direkt mit.. XXXXXXXXXXXXXXXXXXXXXXXXXXX
 /*
    for (let i = 0; i < TaskList.length; i++) {
         console.log(TaskList[i]);

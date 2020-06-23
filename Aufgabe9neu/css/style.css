@@ -48,12 +48,12 @@ p{
 #date{
     position: relative;
     bottom: 10px;
-    left: -100px;
+    left: -150px;
     color: black;
     font-size: 25px;
     font-family: 'Titillium Web', sans-serif;
     text-align: center;
-    top: -90px;
+    top: -10px;
 }
 
 /* ------------ content ------------ */

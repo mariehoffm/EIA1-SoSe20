@@ -13,6 +13,14 @@ main {
     color: grey;
 }
 
+#counterDone{
+    color: grey;
+}
+
+#counterTodo{
+    color: grey;
+}
+
 .inputGroup {
     position: relative;
 }

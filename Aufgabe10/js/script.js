@@ -25,6 +25,17 @@ var todoObjects = [
         todosChecked: false
     },
 ];
+/*
+var CheckedCounter: boolean;
+
+window.addEventListener("load", function(){
+    if (todoObjects.todosChecked == true){
+        ++CheckedCounter;
+    }
+    
+    console.log(CheckedCounter)
+})
+*/
 /**
  * Die Anwendung wird immer wieder auf die selben
  * DOM-Elemente zugreifen müssen. Damit diese Elemente nicht
@@ -111,6 +122,8 @@ function drawListToDOM() {
 }
 function updateCounter() {
     counterDOMElement.innerHTML = todoObjects.length + " in total";
+    counterDoneDOMElement.innerHTML = " done"; // alle mit todosChecked = true
+    counterTodoDOMElement.innerHTML = " need to be done"; //alle mit todosChecked = false
 }
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:

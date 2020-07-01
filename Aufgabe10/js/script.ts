@@ -35,6 +35,19 @@ var todoObjects: any = [
     },
 ];
 
+/*
+var CheckedCounter: boolean;
+
+window.addEventListener("load", function(){
+    if (todoObjects.todosChecked == true){
+        ++CheckedCounter;
+    }
+    
+    console.log(CheckedCounter)
+})
+*/
+
+
 
 /**
  * Die Anwendung wird immer wieder auf die selben
@@ -132,8 +145,12 @@ function drawListToDOM(): void {
     updateCounter();
 }
 
+
+
 function updateCounter(): void {
     counterDOMElement.innerHTML = todoObjects.length + " in total";
+    counterDoneDOMElement.innerHTML = " done"; // alle mit todosChecked = true
+    counterTodoDOMElement.innerHTML = " need to be done";//alle mit todosChecked = false
 }
 
 
@@ -206,7 +223,7 @@ function toggleCheckState(todoObjects.todosChecked: boolean): void {
 
     counterDoneDOMElement.innerHTML = todoObjects.todosChecked.length + " done";
 
-    
+
 
 
     /**

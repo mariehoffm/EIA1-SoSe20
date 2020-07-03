@@ -121,9 +121,17 @@ function drawListToDOM() {
     updateCounter();
 }
 function updateCounter() {
+    var i = 0;
+    var checkmark = 0;
+    while (i < todoObjects.length) {
+        if (todoObjects[i].todosChecked == true) {
+            checkmark++;
+        }
+        i++;
+    }
+    counterDoneDOMElement.innerHTML = checkmark + " done"; // alle mit todosChecked = true
     counterDOMElement.innerHTML = todoObjects.length + " in total";
-    counterDoneDOMElement.innerHTML = " done"; // alle mit todosChecked = true
-    counterTodoDOMElement.innerHTML = " need to be done"; //alle mit todosChecked = false
+    counterTodoDOMElement.innerHTML = todoObjects.length - checkmark + " open tasks"; //alle mit todosChecked = false
 }
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
@@ -160,7 +168,7 @@ function addTodo() {
 /**
  * Der check- / unchecked Zustand eines ToDo wird wie folgt gesetzt:
  */
-function toggleCheckState(todoObjects, todosChecked) {
+function toggleCheckState(index) {
     /**
      * Das Array, , das den Checked- / Uncheck-Status der ToDos abbildet,
      * muss an jener Stelle, an der das entsprechende ToDo steht (nämlich
@@ -175,8 +183,10 @@ function toggleCheckState(todoObjects, todosChecked) {
      * Kurs behandelt wurden) nutzen.
      */
     //todoObjects.todosChecked[index] = !todoObjects.todosChecked[index];
-    todoObjects[todoObjects.todosChecked] = !todoObjects[todoObjects.todosChecked];
-    counterDoneDOMElement.innerHTML = todoObjects.todosChecked.length + " done";
+    //Haken soll gestzt / nicht gesetzt werden:
+    todoObjects[index].todosChecked = !todoObjects[index].todosChecked;
+    //todoObjects[todoObjects.todosChecked] = !todoObjects[todoObjects.todosChecked];
+    //counterDoneDOMElement.innerHTML = todoObjects.todosChecked.length + " done";
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
      * wird wieder getriggert
@@ -193,12 +203,40 @@ function deleteTodo(index) {
      * Jetzt muss diese Stelle beider Arrays gelöscht werden,
      * das ToDo-Text-Array und das Checked/Unchecked-Array
      */
-    todoObjects.todosText.splice(index, 1);
-    todoObjects.todosChecked.splice(index, 1);
+    todoObjects.splice(index, 1);
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
      * wird wieder getriggert
      */
     drawListToDOM();
 }
+window.addEventListener("load", function () {
+    var artyom = new Artyom();
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (i, wildcard) {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            todoObjects.unshift({
+                todosText: (wildcard),
+                todosChecked: false
+            });
+        }
+    });
+    function startContinuousArtyom() {
+        artyom.fatality();
+        setTimeout(function () {
+            artyom.initialize({
+                lang: "de-DE",
+                continuous: true,
+                listen: true,
+                interimResults: true,
+                debug: true
+            }).then(function () {
+                console.log("Ready!");
+            });
+        }, 250);
+    }
+    startContinuousArtyom();
+});
 //# sourceMappingURL=script.js.map

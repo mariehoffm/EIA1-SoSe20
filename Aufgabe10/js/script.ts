@@ -285,9 +285,16 @@ window.addEventListener("load", function(): void {
         action: function(i: any, wildcard: string): void {
             console.log("Neue Aufgabe wird erstellt: " + wildcard);
             todoObjects.unshift({
-                todosText: (wildcard),//WIESO WIRD WILDCARD NICHT IN AUF DER WEBSEITE ANGEZEIGT? XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                todosText: wildcard,  
                 todosChecked: false
+            
+            });
+            drawListToDOM();
         }
+        //drawListToDOM();
+        //todosDOMElement.innerHTML = wildcard;
+
+
     });
     
     function startContinuousArtyom(): void {

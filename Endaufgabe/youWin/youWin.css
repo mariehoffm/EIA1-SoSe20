@@ -1,0 +1,19 @@
+body{
+    background-color: lightgoldenrodyellow;
+    font-family: Retro Gaming;
+
+}
+
+@font-face {
+    font-family: Retro Gaming;
+    src: url(/RetroGaming.ttf);
+}
+
+
+#Text{
+    font-size: 100px;
+}
+
+#Me{
+    font-size: 10px;
+}

@@ -1,5 +1,5 @@
 //erst Variable mit allen Tönen deklarieren:
-var sound = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_laugh.mp3"];
+var sound = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_whistle.mp3"];
 //Ton soll abgespielt werden wenn auf den entsprechenden button geklickt wird
 //erster Ton - boing
 document.getElementById("button1").addEventListener("click", function () {
@@ -21,4 +21,14 @@ document.getElementById("button4").addEventListener("click", function () {
     var playsound = new Audio(sound[3]);
     playsound.play();
 });
-//# sourceMappingURL=easy.js.map
+//zweiter Ton - squeaking
+document.getElementById("button5").addEventListener("click", function () {
+    var playsound = new Audio(sound[4]);
+    playsound.play();
+});
+//zweiter Ton - whistle
+document.getElementById("button6").addEventListener("click", function () {
+    var playsound = new Audio(sound[5]);
+    playsound.play();
+});
+//# sourceMappingURL=medium.js.map

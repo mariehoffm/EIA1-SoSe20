@@ -1,0 +1,37 @@
+@font-face {
+    font-family: Retro Gaming;
+    src: url(/RetroGaming.ttf);
+}
+
+#Level{
+    font-size: 30px;
+}
+
+#Me{
+    font-size: 10px;
+}
+
+
+body{
+    background-color: lightgoldenrodyellow;
+    font-family: Retro Gaming;
+
+}
+
+
+.button{
+    background-color: red;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+
+}
+
+.button:hover {
+    background-color: lightpink;
+}
+
+#soundbuttons{
+    padding: 50px;
+}

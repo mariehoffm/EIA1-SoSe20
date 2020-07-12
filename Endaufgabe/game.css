@@ -1,0 +1,77 @@
+
+#easybutton{
+    background-color: lightblue;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+
+}
+
+#easybutton:hover {
+    background-color: snow;
+}
+
+#mediumbutton{
+    background-color: lightpink;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#mediumbutton:hover {
+    background-color: snow;
+}
+
+#hardbutton{
+    background-color:rgb(238, 190, 101);
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#hardbutton:hover {
+    background-color: snow;
+}
+
+#veryhardbutton{
+    background-color: rgb(195, 84, 195);
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#veryhardbutton:hover {
+    background-color: snow;
+}
+
+body{
+    background-color: lightgoldenrodyellow;
+    font-family: Retro Gaming;
+
+}
+
+.button{
+    font-family: Retro Gaming;
+    font-size: 18px;
+}
+
+
+@font-face {
+    font-family: Retro Gaming;
+    src: url(RetroGaming.ttf);
+  }
+
+
+#choose{
+    font-size: 30px;
+}
+
+#Me{
+    font-size: 10px;
+}
+
+

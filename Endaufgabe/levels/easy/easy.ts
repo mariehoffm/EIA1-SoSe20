@@ -27,3 +27,5 @@ document.getElementById("button4").addEventListener("click", function (){
     playsound.play();
 });
 
+window.alert("update");
+

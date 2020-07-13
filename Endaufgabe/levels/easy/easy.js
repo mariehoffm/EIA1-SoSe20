@@ -21,4 +21,5 @@ document.getElementById("button4").addEventListener("click", function () {
     var playsound = new Audio(sound[3]);
     playsound.play();
 });
+window.alert("update");
 //# sourceMappingURL=easy.js.map

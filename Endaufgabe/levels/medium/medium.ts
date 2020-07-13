@@ -1,7 +1,7 @@
 
 
 //erst Variable mit allen Tönen deklarieren:
-var sound: string[] =["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_whistle.mp3"];
+var sound: string[] =["sound_boing.mp3", "sound_boing_2.mp3", "sound_kids_booo.mp3", "sound_laugh.mp3", "sound_squeaking.mp3", "sound_whistle.mp3"];
 
 
 //Ton soll abgespielt werden wenn auf den entsprechenden button geklickt wird

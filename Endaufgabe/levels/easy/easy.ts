@@ -31,6 +31,8 @@ document.getElementById("button4").addEventListener("click", function (){
     playedSounds.push();
 });
 
+
+
 //sounds die geclickt (&gespielt) werden in einem array speichern
 var playedSounds: string[] = []
 console.log(playedSounds);

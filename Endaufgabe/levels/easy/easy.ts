@@ -62,6 +62,9 @@ document.getElementById("button5").addEventListener("click", function (){
 //array festlegen mit 5 random tönen --> später random machen
 var song: string[] = [ "/sounds/sound_boing_2.mp3",  "/sounds/sound_boing_2.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_laugh.mp3"]
 
+
+
+
 //gespielte Töne mit randomArray vergleichen --> richtig ? weiter / falsch? youLoose / nach 5 TÖnen immernoch richtig? youWin
 
 

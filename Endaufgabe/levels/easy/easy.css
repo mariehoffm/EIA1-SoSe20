@@ -1,6 +1,6 @@
 @font-face {
     font-family: Retro Gaming;
-    src: url(/fonts/RetroGaming.ttf);
+    src: url(/font/RetroGaming.ttf);
 }
 
 #Level{
@@ -37,16 +37,16 @@ body{
     background-color:blue;  
     /*animation-duration: 2s;*/
 }
-#button2:focus {     
+#button2:focus {
     background-color:yellow;    
 }
-#button3:focus {     
+#button3:focus {
     background-color:green;    
 }
-#button4:focus {     
+#button4:focus {
     background-color:purple;    
 }
-#button5:focus {     
+#button5:focus {
     background-color:pink;    
 }
 

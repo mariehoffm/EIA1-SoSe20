@@ -58,12 +58,12 @@ document.getElementById("button5").addEventListener("click", function (){
 var song: string[] = [ "/sounds/sound_boing_2.mp3",  "/sounds/sound_boing_2.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_laugh.mp3"]
 
 window.addEventListener('load', function() {
-        var playsong: string = new Audio(song[0]);
-        playsong.play();
+        //erstmal den ersten Ton abspielen:
+        new Audio (song[0]).play(); 
 
-        if (song[0] == playedSounds[0]){// wenn der gleiche ton gespielt nächster Ton usw 
+        if (song[0] == playedSounds[0]){// dann wenn der gleiche ton gespielt wurde nächster Ton usw 
             var ö: number = 0;
-            var playsong2 = new Audio (song[ö]);
+            var playsong2: HTMLAudioElement = new Audio (song[ö]);
             playsong2.play();
             ++ö;
         } // funktioniert NOCH nicht

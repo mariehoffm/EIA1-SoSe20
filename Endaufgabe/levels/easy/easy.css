@@ -19,18 +19,38 @@ body{
 }
 
 
+
 .button{
     background-color: red;
     cursor: pointer;
     height: 50px;
     width: 200px;
     border-color: rgb(0, 0, 0);
-
 }
 
 .button:hover {
     background-color: lightblue;
 }
+
+/* button farbe ändern wenn geklickt*/
+#button1:focus {     
+    background-color:blue;  
+    /*animation-duration: 2s;*/
+}
+#button2:focus {     
+    background-color:yellow;    
+}
+#button3:focus {     
+    background-color:green;    
+}
+#button4:focus {     
+    background-color:purple;    
+}
+#button5:focus {     
+    background-color:pink;    
+}
+
+
 
 
 #soundbuttons{

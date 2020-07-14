@@ -27,32 +27,30 @@ document.getElementById("button1").addEventListener("click", function () {
         //TESTTTT 
         var i = 0;
         //window.alert(anzahl);
-        let taktgeber = setInterval(function () {
-        var abzuspielen = new Audio(playedSounds[i]);
-        abzuspielen.play().then(function(){
-            var playsong2 = new Audio(song[w]);
-            playsong2.play(); 
-        });
-        window.alert(playedSounds[i]);
-        console.log(playedSounds[i]);
-        if (i == w - 1){ 
-            clearInterval(taktgeber);
-        } 
-        i++; //i=i+1
+        var taktgeber_1 = setInterval(function () {
+            var abzuspielen = new Audio(playedSounds[i]);
+            abzuspielen.play().then(function () {
+                var playsong2 = new Audio(song[w]);
+                playsong2.play();
+            });
+            window.alert(playedSounds[i]);
+            console.log(playedSounds[i]);
+            if (i == w - 1) {
+                clearInterval(taktgeber_1);
+            }
+            i++; //i=i+1
         }, 500);
         //TESTTTTTTT
         //var playsong2 = new Audio(song[w]);
         //playsong2.play();
     }
 });
-
 //zweiter Ton - boing 2
 document.getElementById("button2").addEventListener("click", function () {
     var playsound = new Audio("/sounds/sound_boing_2.mp3");
     playedSounds.push("/sounds/sound_boing_2.mp3");
     playsound.play();
-
-        //window.alert(song[w]);
+    //window.alert(song[w]);
     //window.alert(playedSounds[w]);
     if (song[w] == playedSounds[w]) { // dann wenn der gleiche ton gespielt wurde nächster Ton usw 
         window.alert("BJ");
@@ -66,29 +64,24 @@ document.getElementById("button2").addEventListener("click", function () {
         //TESTTTT 
         var i = 0;
         //window.alert(anzahl);
-        let taktgeber = setInterval(function () {
-        var abzuspielen = new Audio(playedSounds[i]);
-        abzuspielen.play().then(function(){
-            var playsong2 = new Audio(song[w]);
-            playsong2.play(); 
-        });
-        window.alert(playedSounds[i]);
-        console.log(playedSounds[i]);
-        if (i == w - 1){ 
-            clearInterval(taktgeber);
-        } 
-        i++; //i=i+1
+        var taktgeber_2 = setInterval(function () {
+            var abzuspielen = new Audio(playedSounds[i]);
+            abzuspielen.play().then(function () {
+                var playsong2 = new Audio(song[w]);
+                playsong2.play();
+            });
+            window.alert(playedSounds[i]);
+            console.log(playedSounds[i]);
+            if (i == w - 1) {
+                clearInterval(taktgeber_2);
+            }
+            i++; //i=i+1
         }, 500);
         //TESTTTTTTT
         //var playsong2 = new Audio(song[w]);
         //playsong2.play();
     }
 });
-
-
-
-
-
 //dritter Ton - kids booo
 document.getElementById("button3").addEventListener("click", function () {
     var playsound = new Audio("/sounds/sound_kids_booo.mp3");
@@ -108,30 +101,24 @@ document.getElementById("button3").addEventListener("click", function () {
         //TESTTTT 
         var i = 0;
         //window.alert(anzahl);
-        let taktgeber = setInterval(function () {
-        var abzuspielen = new Audio(playedSounds[i]);
-        abzuspielen.play().then(function(){
-            var playsong2 = new Audio(song[w]);
-            playsong2.play(); 
-        });
-        window.alert(playedSounds[i]);
-        console.log(playedSounds[i]);
-        if (i == w - 1){ 
-            clearInterval(taktgeber);
-        } 
-        i++; //i=i+1
+        var taktgeber_3 = setInterval(function () {
+            var abzuspielen = new Audio(playedSounds[i]);
+            abzuspielen.play().then(function () {
+                var playsong2 = new Audio(song[w]);
+                playsong2.play();
+            });
+            window.alert(playedSounds[i]);
+            console.log(playedSounds[i]);
+            if (i == w - 1) {
+                clearInterval(taktgeber_3);
+            }
+            i++; //i=i+1
         }, 500);
         //TESTTTTTTT
         //var playsong2 = new Audio(song[w]);
         //playsong2.play();
     }
 });
-
-
-
-
-
-
 //vierter Ton - laugh
 document.getElementById("button4").addEventListener("click", function () {
     var playsound = new Audio("/sounds/sound_laugh.mp3");
@@ -151,29 +138,24 @@ document.getElementById("button4").addEventListener("click", function () {
         //TESTTTT 
         var i = 0;
         //window.alert(anzahl);
-        let taktgeber = setInterval(function () {
-        var abzuspielen = new Audio(playedSounds[i]);
-        abzuspielen.play().then(function(){
-            var playsong2 = new Audio(song[w]);
-            playsong2.play(); 
-        });
-        window.alert(playedSounds[i]);
-        console.log(playedSounds[i]);
-        if (i == w - 1){ 
-            clearInterval(taktgeber);
-        } 
-        i++; //i=i+1
+        var taktgeber_4 = setInterval(function () {
+            var abzuspielen = new Audio(playedSounds[i]);
+            abzuspielen.play().then(function () {
+                var playsong2 = new Audio(song[w]);
+                playsong2.play();
+            });
+            window.alert(playedSounds[i]);
+            console.log(playedSounds[i]);
+            if (i == w - 1) {
+                clearInterval(taktgeber_4);
+            }
+            i++; //i=i+1
         }, 500);
         //TESTTTTTTT
         //var playsong2 = new Audio(song[w]);
         //playsong2.play();
     }
 });
-
-
-
-
-
 //fünfter Ton - squeaking
 document.getElementById("button5").addEventListener("click", function () {
     var playsound = new Audio("/sounds/sound_squeaking.mp3");
@@ -193,26 +175,24 @@ document.getElementById("button5").addEventListener("click", function () {
         //TESTTTT 
         var i = 0;
         //window.alert(anzahl);
-        let taktgeber = setInterval(function () {
-        var abzuspielen = new Audio(playedSounds[i]);
-        abzuspielen.play().then(function(){
-            var playsong2 = new Audio(song[w]);
-            playsong2.play(); 
-        });
-        window.alert(playedSounds[i]);
-        console.log(playedSounds[i]);
-        if (i == w - 1){ 
-            clearInterval(taktgeber);
-        } 
-        i++; //i=i+1
+        var taktgeber_5 = setInterval(function () {
+            var abzuspielen = new Audio(playedSounds[i]);
+            abzuspielen.play().then(function () {
+                var playsong2 = new Audio(song[w]);
+                playsong2.play();
+            });
+            window.alert(playedSounds[i]);
+            console.log(playedSounds[i]);
+            if (i == w - 1) {
+                clearInterval(taktgeber_5);
+            }
+            i++; //i=i+1
         }, 500);
         //TESTTTTTTT
         //var playsong2 = new Audio(song[w]);
         //playsong2.play();
     }
 });
-
-
 //wenn geklickt wurde das ausführen:
 /*
 if (song[0] == playedSounds[0]) { // dann wenn der gleiche ton gespielt wurde nächster Ton usw
@@ -223,4 +203,5 @@ if (song[0] == playedSounds[0]) { // dann wenn der gleiche ton gespielt wurde n�
 } // funktioniert NOCH nicht
 */
 //gespielte Töne mit randomArray vergleichen --> richtig ? weiter / falsch? youLoose / nach 5 TÖnen immernoch richtig? youWin
+//halloooo
 //# sourceMappingURL=easy.js.map

@@ -1,16 +1,21 @@
 //sounds die geclickt (& gespielt) werden in einem array speichern
-var playedSounds = [];
+var playedSounds: string [] = [];
+
 //array festlegen mit 5 random tönen --> später random machen
-var song = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_laugh.mp3"];
-var w = 0;
+var song: string [] = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_laugh.mp3"];
+var w: number = 0;
+
 window.addEventListener("load", function () {
     //erstmal den ersten Ton abspielen:
-    new Audio(song[0]).play();
+    new Audio(song[0]).play(); 
 });
+
+
+
 //Ton soll abgespielt werden wenn auf den entsprechenden button geklickt wird
 //erster Ton - boing
 document.getElementById("button1").addEventListener("click", function () {
-    var playsound = new Audio("/sounds/sound_boing.mp3");
+    var playsound: HTMLAudioElement = new Audio("/sounds/sound_boing.mp3");
     playsound.play();
     playedSounds.push("/sounds/sound_boing.mp3");
     //window.alert(song[w]);
@@ -28,7 +33,7 @@ document.getElementById("button1").addEventListener("click", function () {
         var i = 0;
         //window.alert(anzahl);
         let taktgeber = setInterval(function () {
-        var abzuspielen = new Audio(playedSounds[i]);
+        var abzuspielen: HTMLAudioElement = new Audio(playedSounds[i]);
         abzuspielen.play().then(function(){
             var playsong2 = new Audio(song[w]);
             playsong2.play(); 
@@ -64,10 +69,10 @@ document.getElementById("button2").addEventListener("click", function () {
         }
         //ende Schleife*/
         //TESTTTT 
-        var i = 0;
+        var i: number = 0;
         //window.alert(anzahl);
         let taktgeber = setInterval(function () {
-        var abzuspielen = new Audio(playedSounds[i]);
+        var abzuspielen: HTMLAudioElement = new Audio(playedSounds[i]);
         abzuspielen.play().then(function(){
             var playsong2 = new Audio(song[w]);
             playsong2.play(); 
@@ -196,7 +201,7 @@ document.getElementById("button5").addEventListener("click", function () {
         let taktgeber = setInterval(function () {
         var abzuspielen = new Audio(playedSounds[i]);
         abzuspielen.play().then(function(){
-            var playsong2 = new Audio(song[w]);
+            var playsong2: HTMLAudioElement = new Audio(song[w]);
             playsong2.play(); 
         });
         window.alert(playedSounds[i]);

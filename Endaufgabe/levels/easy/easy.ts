@@ -47,7 +47,7 @@ document.getElementById("button5").addEventListener("click", function (){
     var playsound: HTMLAudioElement = new Audio("sound_squeaking.mp3"); 
     playsound.play();
     playedSounds.push(sound[4]);
-    console.log("playedSoundArray: "playedSounds);//gespielte Töne in der Konsole ausgeben
+    console.log("playedSoundArray: "playedSounds); //gespielte Töne in der Konsole ausgeben
 
 
 });

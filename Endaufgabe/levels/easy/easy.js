@@ -42,7 +42,7 @@ var song = ["/sounds/sound_boing_2.mp3", "/sounds/sound_boing_2.mp3", "/sounds/s
 window.addEventListener('load', function () {
     var playsong = new Audio(song[0]);
     playsong.play();
-    if (song[0] == playedSounds[0]) { // wenn der gleiche ton gespielt wurde wiederholen
+    if (song[0] == playedSounds[0]) { // wenn der gleiche ton gespielt nächster Ton usw 
         var ö = 0;
         var playsong2 = new Audio(song[ö]);
         playsong2.play();

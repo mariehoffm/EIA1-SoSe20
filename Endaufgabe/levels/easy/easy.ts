@@ -36,9 +36,12 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
     // wenn dem button1 keine Klasse zugeordnet ist bekommt er Klasse dunkel (button1.dunkel)
     if (btn.getAttribute("class") != "hell") {// wenn der Button beim Laden der Seite nicht die Klasse dunkel hat, dann bekommt er sie jetzt
       btn.setAttribute("class", "hell"); // button1.dunkel
-      }   
+      }
+    setTimeout(function(): void{ btn.setAttribute("class", "dunkel"); }, 3000);
 //Design
 
+
+ 
 // wenn der Button geklickt wurde werden alle vom User bisher richtig gespielten Töne(array playedSounds) abgespielt(Zähler c),
 // + der nächste neue Ton aus Array song (song[w + 1])
     playedSounds.push(samplename); // wir speichern den gespielten Ton in array playedSounds
@@ -51,12 +54,15 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
         console.log("nächster zu erwartender Ton wäre: " + song[c]);
     // wenn richtig gespielt wurde spielen wir Array Sound mit einem weiteren neuen Ton (bis position c):
 
+
+
     // Taktgeber start
         let i: number = 0; // let statt var, i brauchen wir nur hier in diesem Block
         let taktgeber: number = setInterval(function (): void {
         // es wird abgespielt was der User bisher gespielt hatte:
             var abgespielt: HTMLAudioElement = new Audio(song[i]);
             abgespielt.play();
+
             if (song[i] == song[c]) { 
                 clearInterval(taktgeber);
 
@@ -108,7 +114,10 @@ window.addEventListener("load", function(): void {
   if (btn5.getAttribute("class") != "dunkel") {// wenn der Button beim Laden der Seite nicht die Klasse dunkel dann bekommt er sie jetzt
     btn5.setAttribute("class", "dunkel"); // button1.dunkel
     }
+ 
 
+
+    
 }); //ende eventlistener load
 
 //wenn geklickt wurde das ausführen:

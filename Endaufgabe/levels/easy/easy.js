@@ -31,6 +31,7 @@ function ButtonFunktion(buttonname, samplename) {
     if (btn.getAttribute("class") != "hell") { // wenn der Button beim Laden der Seite nicht die Klasse dunkel hat, dann bekommt er sie jetzt
         btn.setAttribute("class", "hell"); // button1.dunkel
     }
+    setTimeout(function () { btn.setAttribute("class", "dunkel"); }, 3000);
     //Design
     // wenn der Button geklickt wurde werden alle vom User bisher richtig gespielten Töne(array playedSounds) abgespielt(Zähler c),
     // + der nächste neue Ton aus Array song (song[w + 1])

@@ -36,13 +36,16 @@ body{
 
 #button1.hell{
     background-color: rgb(255, 2, 2);
+    transition-duration: 0.4s;
     cursor: pointer;
     height: 50px;
     width: 200px;
     border-color: rgb(0, 0, 0);
 }
+
 #button2.dunkel{
     background-color: rgb(150, 3, 3);
+    animation-duration: 3s;
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -110,5 +113,4 @@ body{
 #soundbuttons{
     padding: 50px;
 }
-
 

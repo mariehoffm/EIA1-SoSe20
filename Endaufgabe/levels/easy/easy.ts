@@ -22,11 +22,11 @@ document.getElementById("start").addEventListener("click", function (): void {
 //Ton soll abgespielt werden wenn auf den entsprechenden button geklickt wird
 //erster Ton - boing
 //document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied01,4);});
-document.querySelector("#button1").addEventListener("click", function(): void {ButtonFunktion("button1", "/sounds/sound_boing.mp3"); });
-document.querySelector("#button2").addEventListener("click", function(): void {ButtonFunktion("button2", "/sounds/sound_boing_2.mp3"); });
-document.querySelector("#button3").addEventListener("click", function(): void {ButtonFunktion("button3", "/sounds/sound_kids_booo.mp3"); });
-document.querySelector("#button4").addEventListener("click", function(): void {ButtonFunktion("button4", "/sounds/sound_squeaking.mp3"); });
-document.querySelector("#button5").addEventListener("click", function(): void {ButtonFunktion("button5", "/sounds/sound_laugh.mp3"); });
+document.querySelector("#button1").addEventListener("click", function(): void {ButtonFunktion("button1", song[0]); });
+document.querySelector("#button2").addEventListener("click", function(): void {ButtonFunktion("button2", song[1]); });
+document.querySelector("#button3").addEventListener("click", function(): void {ButtonFunktion("button3", song[2]); });
+document.querySelector("#button4").addEventListener("click", function(): void {ButtonFunktion("button4", song[3]); });
+document.querySelector("#button5").addEventListener("click", function(): void {ButtonFunktion("button5", song[4]); });
 
 function ButtonFunktion(buttonname: string, samplename: string): void {
     buttonname = "#" + buttonname;
@@ -37,7 +37,7 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
     if (btn.getAttribute("class") != "hell") {// wenn der Button beim Laden der Seite nicht die Klasse dunkel hat, dann bekommt er sie jetzt
       btn.setAttribute("class", "hell"); // button1.dunkel
       }
-    setTimeout(function(): void{ btn.setAttribute("class", "dunkel"); }, 3000);
+    setTimeout(function(): void { btn.setAttribute("class", "dunkel"); }, 3000);
 //Design
 
 
@@ -55,17 +55,18 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
     // wenn richtig gespielt wurde spielen wir Array Sound mit einem weiteren neuen Ton (bis position c):
 
 
-
     // Taktgeber start
         let i: number = 0; // let statt var, i brauchen wir nur hier in diesem Block
         let taktgeber: number = setInterval(function (): void {
         // es wird abgespielt was der User bisher gespielt hatte:
+        //HIER NOCH DAS ARRAY BIS DAHIN REIN
+        
             var abgespielt: HTMLAudioElement = new Audio(song[i]);
             abgespielt.play();
 
             if (song[i] == song[c]) { 
                 clearInterval(taktgeber);
-
+                
         // Gewinner:
                 if (song.length == playedSounds.length) {
                     var gewonnen: HTMLAudioElement = new Audio(winnerSound);

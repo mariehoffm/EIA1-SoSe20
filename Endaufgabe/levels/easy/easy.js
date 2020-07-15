@@ -17,11 +17,11 @@ document.getElementById("start").addEventListener("click", function () {
 //Ton soll abgespielt werden wenn auf den entsprechenden button geklickt wird
 //erster Ton - boing
 //document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied01,4);});
-document.querySelector("#button1").addEventListener("click", function () { ButtonFunktion("button1", "/sounds/sound_boing.mp3"); });
-document.querySelector("#button2").addEventListener("click", function () { ButtonFunktion("button2", "/sounds/sound_boing_2.mp3"); });
-document.querySelector("#button3").addEventListener("click", function () { ButtonFunktion("button3", "/sounds/sound_kids_booo.mp3"); });
-document.querySelector("#button4").addEventListener("click", function () { ButtonFunktion("button4", "/sounds/sound_squeaking.mp3"); });
-document.querySelector("#button5").addEventListener("click", function () { ButtonFunktion("button5", "/sounds/sound_laugh.mp3"); });
+document.querySelector("#button1").addEventListener("click", function () { ButtonFunktion("button1", song[0]); });
+document.querySelector("#button2").addEventListener("click", function () { ButtonFunktion("button2", song[1]); });
+document.querySelector("#button3").addEventListener("click", function () { ButtonFunktion("button3", song[2]); });
+document.querySelector("#button4").addEventListener("click", function () { ButtonFunktion("button4", song[3]); });
+document.querySelector("#button5").addEventListener("click", function () { ButtonFunktion("button5", song[4]); });
 function ButtonFunktion(buttonname, samplename) {
     buttonname = "#" + buttonname;
     console.log("ich bin in funktion" + " Button: " + buttonname + " sample: " + samplename);
@@ -48,6 +48,7 @@ function ButtonFunktion(buttonname, samplename) {
         var i_1 = 0; // let statt var, i brauchen wir nur hier in diesem Block
         var taktgeber_1 = setInterval(function () {
             // es wird abgespielt was der User bisher gespielt hatte:
+            //HIER NOCH DAS ARRAY BIS DAHIN REIN
             var abgespielt = new Audio(song[i_1]);
             abgespielt.play();
             if (song[i_1] == song[c]) {

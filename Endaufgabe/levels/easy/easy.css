@@ -32,6 +32,10 @@ body{
     background-color: lightblue;
 }
 
+#button1{
+
+}
+
 /* button farbe ändern wenn geklickt*/
 #button1:focus {     
     background-color:blue;  
@@ -45,9 +49,6 @@ body{
 }
 #button4:focus {
     background-color:purple;    
-}
-#button5:focus {
-    background-color:pink;    
 }
 
 

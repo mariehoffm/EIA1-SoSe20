@@ -2,13 +2,13 @@
 var playedSounds: string [] = [];
 
 //array festlegen mit 5 random tönen --> später random machen
-var song: string [] = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_laugh.mp3"];
+var song: string [] = ["/sounds/sound_boing.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_laugh.mp3", "/sounds/sound_kids_booo.mp3"];
 var w: number = 0;
 
 window.addEventListener("load", function () {
     //erstmal den ersten Ton abspielen:
     new Audio(song[0]).play(); 
-});
+}); 
 
 
 
@@ -20,8 +20,9 @@ document.getElementById("button1").addEventListener("click", function () {
     playedSounds.push("/sounds/sound_boing.mp3");
     //window.alert(song[w]);
     //window.alert(playedSounds[w]);
+
     if (song[w] == playedSounds[w]) { // dann wenn der gleiche ton gespielt wurde nächster Ton usw 
-        window.alert("BJ");
+        //window.alert("BJ");
         w++;
         /*//start Schleife (array playedSounds durchlaufen)
         var i: number = 0;
@@ -29,7 +30,6 @@ document.getElementById("button1").addEventListener("click", function () {
             new Audio (playedSounds[i]).play();
         }
         //ende Schleife*/
-        //TESTTTT 
         var i = 0;
         //window.alert(anzahl);
         let taktgeber = setInterval(function () {
@@ -38,14 +38,13 @@ document.getElementById("button1").addEventListener("click", function () {
             var playsong2 = new Audio(song[w]);
             playsong2.play(); 
         });
-        window.alert(playedSounds[i]); 
-        console.log(playedSounds[i]);
-        if (i == w - 1){ 
+        window.alert(playedSounds[i]); //HIER MUSS IWIE NE PAUSE HIN
+        //console.log(playedSounds[i]);
+        if (i == w - 1){
             clearInterval(taktgeber);
         } 
         i++; //i=i+1
         }, 500);
-        //TESTTTTTTT
         //var playsong2 = new Audio(song[w]);
         //playsong2.play();
     }
@@ -53,14 +52,14 @@ document.getElementById("button1").addEventListener("click", function () {
 
 //zweiter Ton - boing 2
 document.getElementById("button2").addEventListener("click", function () {
-    var playsound = new Audio("/sounds/sound_boing_2.mp3");
-    playedSounds.push("/sounds/sound_boing_2.mp3");
+    var playsound = new Audio("/sounds/sound_whistle.mp3");
+    playedSounds.push("/sounds/sound_whistle.mp3");
     playsound.play();
 
         //window.alert(song[w]);
     //window.alert(playedSounds[w]);
     if (song[w] == playedSounds[w]) { // dann wenn der gleiche ton gespielt wurde nächster Ton usw 
-        window.alert("BJ");
+        //window.alert("BJ");
         w++;
         /*//start Schleife (array playedSounds durchlaufen)
         var i: number = 0;
@@ -77,8 +76,8 @@ document.getElementById("button2").addEventListener("click", function () {
             var playsong2 = new Audio(song[w]);
             playsong2.play(); 
         });
-        window.alert(playedSounds[i]);
-        console.log(playedSounds[i]);
+        //window.alert(playedSounds[i]);
+        //console.log(playedSounds[i]);
         if (i == w - 1){ 
             clearInterval(taktgeber);
         } 
@@ -96,13 +95,13 @@ document.getElementById("button2").addEventListener("click", function () {
 
 //dritter Ton - kids booo
 document.getElementById("button3").addEventListener("click", function () {
-    var playsound = new Audio("/sounds/sound_kids_booo.mp3");
+    var playsound = new Audio("/sounds/sound_squeaking.mp3");
     playsound.play();
-    playedSounds.push("/sounds/sound_kids_booo.mp3");
+    playedSounds.push("/sounds/sound_squeaking.mp3");
     //window.alert(song[w]);
     //window.alert(playedSounds[w]);
     if (song[w] == playedSounds[w]) { // dann wenn der gleiche ton gespielt wurde nächster Ton usw 
-        window.alert("BJ");
+        //window.alert("BJ");
         w++;
         /*//start Schleife (array playedSounds durchlaufen)
         var i: number = 0;
@@ -119,8 +118,8 @@ document.getElementById("button3").addEventListener("click", function () {
             var playsong2 = new Audio(song[w]);
             playsong2.play(); 
         });
-        window.alert(playedSounds[i]);
-        console.log(playedSounds[i]);
+        //window.alert(playedSounds[i]);
+        //console.log(playedSounds[i]);
         if (i == w - 1){ 
             clearInterval(taktgeber);
         } 
@@ -145,7 +144,7 @@ document.getElementById("button4").addEventListener("click", function () {
     //window.alert(song[w]);
     //window.alert(playedSounds[w]);
     if (song[w] == playedSounds[w]) { // dann wenn der gleiche ton gespielt wurde nächster Ton usw 
-        window.alert("BJ");
+        //window.alert("BJ");
         w++;
         /*//start Schleife (array playedSounds durchlaufen)
         var i: number = 0;
@@ -162,8 +161,8 @@ document.getElementById("button4").addEventListener("click", function () {
             var playsong2 = new Audio(song[w]);
             playsong2.play(); 
         });
-        window.alert(playedSounds[i]);
-        console.log(playedSounds[i]);
+        //window.alert(playedSounds[i]);
+        //console.log(playedSounds[i]);
         if (i == w - 1){ 
             clearInterval(taktgeber);
         } 
@@ -177,17 +176,15 @@ document.getElementById("button4").addEventListener("click", function () {
 
 
 
-
-
-//fünfter Ton - squeaking
-document.getElementById("button5").addEventListener("click", function () {
-    var playsound = new Audio("/sounds/sound_squeaking.mp3");
+//vierter Ton - kids booo
+document.getElementById("button4").addEventListener("click", function () {
+    var playsound = new Audio("/sounds/sound_kids_booo.mp3");
     playsound.play();
-    playedSounds.push("/sounds/sound_squeaking.mp3");
+    playedSounds.push("/sounds/sound_kids_booo.mp3");
     //window.alert(song[w]);
     //window.alert(playedSounds[w]);
     if (song[w] == playedSounds[w]) { // dann wenn der gleiche ton gespielt wurde nächster Ton usw 
-        window.alert("BJ");
+        //window.alert("BJ");
         w++;
         /*//start Schleife (array playedSounds durchlaufen)
         var i: number = 0;
@@ -201,11 +198,11 @@ document.getElementById("button5").addEventListener("click", function () {
         let taktgeber = setInterval(function () {
         var abzuspielen = new Audio(playedSounds[i]);
         abzuspielen.play().then(function(){
-            var playsong2: HTMLAudioElement = new Audio(song[w]);
+            var playsong2 = new Audio(song[w]);
             playsong2.play(); 
         });
-        window.alert(playedSounds[i]);
-        console.log(playedSounds[i]);
+        //window.alert(playedSounds[i]);
+        //console.log(playedSounds[i]);
         if (i == w - 1){ 
             clearInterval(taktgeber);
         } 
@@ -216,6 +213,7 @@ document.getElementById("button5").addEventListener("click", function () {
         //playsong2.play();
     }
 });
+
 
 
 

@@ -26,7 +26,7 @@ body{
     border-color: rgb(0, 0, 0);
 }
 
-#button1.dunkel{
+#button0.dunkel{
     background-color: rgb(150, 3, 3);
     cursor: pointer;
     height: 50px;
@@ -34,7 +34,7 @@ body{
     border-color: rgb(0, 0, 0);
 }
 
-#button1.hell{
+#button0.hell{
     background-color: rgb(255, 2, 2);
     transition-duration: 0.4s;
     cursor: pointer;
@@ -43,9 +43,25 @@ body{
     border-color: rgb(0, 0, 0);
 }
 
-#button2.dunkel{
+#button1.dunkel{
     background-color: rgb(150, 3, 3);
     animation-duration: 3s;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#button1.hell{
+    background-color: rgb(255, 2, 2);
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#button2.dunkel{
+    background-color: rgb(150, 3, 3);
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -59,7 +75,6 @@ body{
     width: 200px;
     border-color: rgb(0, 0, 0);
 }
-
 #button3.dunkel{
     background-color: rgb(150, 3, 3);
     cursor: pointer;
@@ -84,21 +99,6 @@ body{
 }
 
 #button4.hell{
-    background-color: rgb(255, 2, 2);
-    cursor: pointer;
-    height: 50px;
-    width: 200px;
-    border-color: rgb(0, 0, 0);
-}
-#button5.dunkel{
-    background-color: rgb(150, 3, 3);
-    cursor: pointer;
-    height: 50px;
-    width: 200px;
-    border-color: rgb(0, 0, 0);
-}
-
-#button5.hell{
     background-color: rgb(255, 2, 2);
     cursor: pointer;
     height: 50px;

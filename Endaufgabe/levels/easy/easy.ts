@@ -6,6 +6,12 @@ var richtigGespielt: Boolean = false;
 var song: string[] = ["/sounds/sound_boing_2.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"];
 var notRandomSong: string[] = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"];
 
+//random arraytöne aufrufen lassen:
+Math.random();
+Math.floor(Math.random() * 5); // abrunden damit keine Kommazahlen 
+//window.alert(Math.floor(Math.random() * 10)); 
+
+
 var looserTon: string = "/sounds/looserSound.mp3";
 var winnerSound: string = "/sounds/winnerSound.mp3";
 var letzterSound: number = 0; //Zähler für vom User gespielte Töne (Button Clickzähler)
@@ -39,7 +45,7 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
     console.log("ich bin in funktion" + " Button: " + buttonname + " sample: " + samplename);
 
     var gedrueckterButton: HTMLAudioElement = new Audio(samplename);
-    gedrueckterButton.play(); 
+    gedrueckterButton.play();
 
     //Design: 
     var btn: Element = document.querySelector(buttonname);
@@ -49,9 +55,8 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
     }
     setTimeout(function (): void { btn.setAttribute("class", "dunkel"); }, 3000);
     //Design
+ 
 
- 
- 
     // wenn der Button geklickt wurde werden alle vom User bisher richtig gespielten Töne(array playedSounds) abgespielt(Zähler c),
     // + der nächste neue Ton aus Array song (song[w + 1])
     playedSounds.push(samplename); // wir speichern den gespielten Ton in array playedSounds
@@ -67,24 +72,23 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
             console.log("nächster zu erwartender Ton wäre: " + song[letzterSound]);
             // wenn richtig gespielt wurde spielen wir Array Sound mit einem weiteren neuen Ton (bis position c):
 
- 
+
             // Taktgeber start 
-            let i: number = 0; // let statt var, i brauchen wir nur hier in diesem Block
+            var i: number = 0; //IN Math.floor(Math.random() * 10) GEÄNDERT STATT 0 - funktioniert aber nicht :------(
             let taktgeber: number = setInterval(function (): void {
                 // es wird abgespielt was der User bisher gespielt hatte:
-                //HIER NOCH DAS ARRAY BIS DAHIN REIN
- 
-                var abgespielt: HTMLAudioElement = new Audio(song[i]);
-                abgespielt.play(); 
 
-                for (let index: number = 0; index < notRandomSong.length; index++) {
-                    if (song[i] == notRandomSong[index]){
+                var abgespielt: HTMLAudioElement = new Audio(song[i]);
+                abgespielt.play();
+
+                for (var index: number = 0; index < notRandomSong.length; index++) {
+                    if (song[i] == notRandomSong[index]) {
                         btn = document.querySelector("#button" + index);
                         btn.setAttribute("class", "hell");
                         setTimeout(function (): void {
-                            document.querySelector("#button" + index).setAttribute("class", "dunkel"); 
-                            }, 3000);
-
+                            document.querySelector("#button" + index).setAttribute("class", "dunkel");
+                        }, 2500);
+ 
                     } 
                 }
 
@@ -94,17 +98,19 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
 
                     // Gewinner: 
                     if (song.length == playedSounds.length) {
+                        //var urlGewonnen: HTMLElement = document.getElementById("gewinnerLink");
+                        //window.location.href = "https://mariehoffm.github.io/EIA1-SoSe20/Endaufgabe/youWin/index.html";
                         var gewonnen: HTMLAudioElement = new Audio(winnerSound);
                         gewonnen.play();
                     }
-                    playedSounds = [];
+                    playedSounds = []; 
                     bisherigeTöne = 0;
 
 
                 }
                 i++; //i=i+1
             }, 1000);
-        } 
+        }
 
 
 

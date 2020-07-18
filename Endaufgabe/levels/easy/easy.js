@@ -4,6 +4,10 @@ var richtigGespielt = false;
 //array festlegen mit 5 random tönen --> später random machen
 var song = ["/sounds/sound_boing_2.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"];
 var notRandomSong = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"];
+//random arraytöne aufrufen lassen:
+Math.random();
+Math.floor(Math.random() * 5); // abrunden damit keine Kommazahlen 
+//window.alert(Math.floor(Math.random() * 10)); 
 var looserTon = "/sounds/looserSound.mp3";
 var winnerSound = "/sounds/winnerSound.mp3";
 var letzterSound = 0; //Zähler für vom User gespielte Töne (Button Clickzähler)
@@ -51,35 +55,33 @@ function ButtonFunktion(buttonname, samplename) {
             console.log("nächster zu erwartender Ton wäre: " + song[letzterSound]);
             // wenn richtig gespielt wurde spielen wir Array Sound mit einem weiteren neuen Ton (bis position c):
             // Taktgeber start 
-            var i_1 = 0; // let statt var, i brauchen wir nur hier in diesem Block
+            var i = 0; //IN Math.floor(Math.random() * 10) GEÄNDERT STATT 0 - funktioniert aber nicht :------(
             var taktgeber_1 = setInterval(function () {
                 // es wird abgespielt was der User bisher gespielt hatte:
-                //HIER NOCH DAS ARRAY BIS DAHIN REIN
-                var abgespielt = new Audio(song[i_1]);
+                var abgespielt = new Audio(song[i]);
                 abgespielt.play();
-                var _loop_1 = function (index) {
-                    if (song[i_1] == notRandomSong[index]) {
+                for (var index = 0; index < notRandomSong.length; index++) {
+                    if (song[i] == notRandomSong[index]) {
                         btn = document.querySelector("#button" + index);
                         btn.setAttribute("class", "hell");
                         setTimeout(function () {
                             document.querySelector("#button" + index).setAttribute("class", "dunkel");
-                        }, 3000);
+                        }, 2500);
                     }
-                };
-                for (var index = 0; index < notRandomSong.length; index++) {
-                    _loop_1(index);
                 }
-                if (song[i_1] == song[letzterSound]) {
+                if (song[i] == song[letzterSound]) {
                     clearInterval(taktgeber_1);
                     // Gewinner: 
                     if (song.length == playedSounds.length) {
+                        //var urlGewonnen: HTMLElement = document.getElementById("gewinnerLink");
+                        //window.location.href = "https://mariehoffm.github.io/EIA1-SoSe20/Endaufgabe/youWin/index.html";
                         var gewonnen = new Audio(winnerSound);
                         gewonnen.play();
                     }
                     playedSounds = [];
                     bisherigeTöne = 0;
                 }
-                i_1++; //i=i+1
+                i++; //i=i+1
             }, 1000);
         }
         //Taktgeber ende

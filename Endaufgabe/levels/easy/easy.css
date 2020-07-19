@@ -114,3 +114,10 @@ body{
     padding: 50px;
 }
 
+#WinText{
+    font-size: 100px;
+}
+
+#LooseText{
+    font-size: 100px;
+}

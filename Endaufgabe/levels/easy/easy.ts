@@ -2,15 +2,22 @@
 var playedSounds: string[] = [];
 var richtigGespielt: Boolean = false;
 
+
 //array festlegen mit 5 random tönen --> später random machen
-var song: string[] = ["/sounds/sound_boing_2.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"];
-var notRandomSong: string[] = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"];
+var song: string[] = []; // dir Reihenfolge die abgespielt werden soll zum nachspielen
+var notRandomSong: string[] = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"]; // damit die buttons immer einer mp3 zugeordnet werden können
 
 //random arraytöne aufrufen lassen:
 Math.random();
-Math.floor(Math.random() * 5); // abrunden damit keine Kommazahlen 
-//window.alert(Math.floor(Math.random() * 10)); 
+Math.floor(Math.random() * 5); // abrunden damit keine Kommazahlen und insgesamt 5 Töne weil level easy
+//window.alert(Math.floor(Math.random() * 5)); //funktioniert
 
+//array song immer wieder per Zufall neu erstellen:
+for (let i: number = 0; i < 5; i++) {
+    song.push(notRandomSong[Math.floor(Math.random() * 5)]);
+}
+
+console.log(song);
 
 var looserTon: string = "/sounds/looserSound.mp3";
 var winnerSound: string = "/sounds/winnerSound.mp3";
@@ -41,6 +48,7 @@ document.querySelector("#button4").addEventListener("click", function (): void {
 
 
 function ButtonFunktion(buttonname: string, samplename: string): void {
+
     buttonname = "#" + buttonname;
     console.log("ich bin in funktion" + " Button: " + buttonname + " sample: " + samplename);
 
@@ -53,7 +61,7 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
     if (btn.getAttribute("class") != "hell") {// wenn der Button beim Laden der Seite nicht die Klasse dunkel hat, dann bekommt er sie jetzt
         btn.setAttribute("class", "hell"); // button1.dunkel
     }
-    setTimeout(function (): void { btn.setAttribute("class", "dunkel"); }, 3000);
+    setTimeout(function (): void { btn.setAttribute("class", "dunkel"); }, 2000);
     //Design
  
 
@@ -89,7 +97,7 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
                             document.querySelector("#button" + index).setAttribute("class", "dunkel");
                         }, 2500);
  
-                    } 
+                    }  
                 }
 
 
@@ -102,6 +110,8 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
                         //window.location.href = "https://mariehoffm.github.io/EIA1-SoSe20/Endaufgabe/youWin/index.html";
                         var gewonnen: HTMLAudioElement = new Audio(winnerSound);
                         gewonnen.play();
+                        gewonnenFenster ();
+
                     }
                     playedSounds = []; 
                     bisherigeTöne = 0;
@@ -121,16 +131,54 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
         var verloren: HTMLAudioElement = new Audio(looserTon);
         verloren.play();
         playedSounds = [];
+        verlorenFenster();
 
     } // ende von if (playedSounds[c] == song[c])
-
 
 } // ende von ButtonFunktion
 
 
+function gewonnenFenster (): void {
+    // diese Funktion sorg für das verschwinden aller Elemente die auf der Win Seite nicht erscheinen sollen:
+        let start: Element = document.querySelector("#start");
+        start.remove();
+        let btn1: Element = document.querySelector("#button0");
+        btn1.remove();
+        let btn2: Element = document.querySelector("#button1");
+        btn2.remove();
+        let btn3: Element = document.querySelector("#button2");
+        btn3.remove();
+        let btn4: Element = document.querySelector("#button3");
+        btn4.remove();
+        let btn5: Element = document.querySelector("#button4");
+        btn5.remove();
+        //winner.style.display = "block";
+        document.getElementById("WinText").style.display = "block";
+
+    }
+
+function verlorenFenster(): void {
+    // diese Funktion sorg für das verschwinden aller Elemente die auf der Loose Seite nicht erscheinen sollen:
+    let start: Element = document.querySelector("#start");
+    start.remove();
+    let btn1: Element = document.querySelector("#button0");
+    btn1.remove();
+    let btn2: Element = document.querySelector("#button1");
+    btn2.remove();
+    let btn3: Element = document.querySelector("#button2");
+    btn3.remove();
+    let btn4: Element = document.querySelector("#button3");
+    btn4.remove();
+    let btn5: Element = document.querySelector("#button4");
+    btn5.remove();
+    //winner.style.display = "block";
+    document.getElementById("LooseText").style.display = "block";
+
+} 
 
 
 window.addEventListener("load", function (): void {
+
     var btn1: Element = document.querySelector("#button0");
     // wenn dem button1 keine klasse zugeordnet ist bekommt er Klasse dunkel (button1.dunkel)
     if (btn1.getAttribute("class") != "dunkel") {// wenn der Button beim Laden der Seite nicht die Klasse dunkel dann bekommt er sie jetzt
@@ -156,6 +204,25 @@ window.addEventListener("load", function (): void {
     if (btn5.getAttribute("class") != "dunkel") {// wenn der Button beim Laden der Seite nicht die Klasse dunkel dann bekommt er sie jetzt
         btn5.setAttribute("class", "dunkel"); // button1.dunkel
     }
+    
+    //Win und Loose soll nur angezeigt werden wenn gewonnen / verloren wurde
+    document.getElementById("WinText").style.display = "none";
+    document.getElementById("LooseText").style.display = "none";
+
+
+    /*
+    let winText: HTMLElement = document.getElementById("#WinText"); 
+    window.alert("test1");
+    winText.style.display = "none";
+    window.alert("test2"); //wird nicht ausgegeben
+
+    let looseText: HTMLElement = document.getElementById("#LooseText");
+    looseText.style.display = "none";
+    */
+
+    
+
+
 
 
 

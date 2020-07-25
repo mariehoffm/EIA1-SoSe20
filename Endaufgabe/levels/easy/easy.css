@@ -3,6 +3,11 @@
     src: url(/font/RetroGaming.ttf);
 }
 
+#start{
+    font-family: Retro Gaming;
+
+}
+
 #Level{
     font-size: 30px;
 }
@@ -18,6 +23,7 @@ body{
 
 }
 
+/*
 .button{
     background-color: red;
     cursor: pointer;
@@ -25,9 +31,10 @@ body{
     width: 200px;
     border-color: rgb(0, 0, 0);
 }
+*/
 
 #button0.dunkel{
-    background-color: rgb(150, 3, 3);
+    background-color: purple;
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -35,7 +42,7 @@ body{
 }
 
 #button0.hell{
-    background-color: rgb(255, 2, 2);
+    background-color: lightblue;
     transition-duration: 0.4s;
     cursor: pointer;
     height: 50px;
@@ -44,7 +51,7 @@ body{
 }
 
 #button1.dunkel{
-    background-color: rgb(150, 3, 3);
+    background-color: red;
     animation-duration: 3s;
     cursor: pointer;
     height: 50px;
@@ -53,7 +60,7 @@ body{
 }
 
 #button1.hell{
-    background-color: rgb(255, 2, 2);
+    background-color: lightblue;
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -61,7 +68,7 @@ body{
 }
 
 #button2.dunkel{
-    background-color: rgb(150, 3, 3);
+    background-color: green;
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -69,14 +76,14 @@ body{
 }
 
 #button2.hell{
-    background-color: rgb(255, 2, 2);
+    background-color: lightblue;
     cursor: pointer;
     height: 50px;
     width: 200px;
     border-color: rgb(0, 0, 0);
 }
 #button3.dunkel{
-    background-color: rgb(150, 3, 3);
+    background-color: yellow;
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -84,14 +91,14 @@ body{
 }
 
 #button3.hell{
-    background-color: rgb(255, 2, 2);
+    background-color: lightblue;
     cursor: pointer;
     height: 50px;
     width: 200px;
     border-color: rgb(0, 0, 0);
 }
 #button4.dunkel{
-    background-color: rgb(150, 3, 3);
+    background-color: blue;
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -99,15 +106,30 @@ body{
 }
 
 #button4.hell{
-    background-color: rgb(255, 2, 2);
+    background-color: lightblue;
     cursor: pointer;
     height: 50px;
     width: 200px;
     border-color: rgb(0, 0, 0);
 }
-.button:hover {
+
+#start.hell{
     background-color: lightblue;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
 }
+
+#start.dunkel{
+    background-color: pink;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+
 
 
 #soundbuttons{

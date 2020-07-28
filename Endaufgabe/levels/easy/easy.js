@@ -2,27 +2,14 @@
 var playedSounds = [];
 var richtigGespielt = false;
 var alleSamples = ["/sounds/sound_boing_2.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"];
-//array festlegen mit 5 random tönen --> später random machen
 var song = []; // dir Reihenfolge die abgespielt werden soll zum nachspielen
 var notRandomSong = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"]; // damit die buttons immer einer mp3 zugeordnet werden können
-/*
-//random arraytöne aufrufen lassen:
-Math.random();
-Math.floor(Math.random() * 5); // abrunden damit keine Kommazahlen und insgesamt 5 Töne weil level easy
-//window.alert(Math.floor(Math.random() * 5)); //funktioniert
-
-//array song immer wieder per Zufall neu erstellen:
-for (let i: number = 0; i < 5; i++) {
-    song.push(notRandomSong[Math.floor(Math.random() * 5)]);
-}
-
-console.log(song);*/
 //random arraytöne aufrufen lassen:
 Math.random();
 Math.floor(Math.random() * 5); // abrunden damit keine Kommazahlen 
 //window.alert(Math.floor(Math.random() * 10)); 
 //array song immer wieder per Zufall neu erstellen: 
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < 6; i++) {
     song.push(alleSamples[Math.floor(Math.random() * 5)]);
 }
 console.log(song);
@@ -36,10 +23,6 @@ var bisherigeTöne = 0;
 //erstmal den ersten Ton abspielen:
 //new Audio(song[0]).play(); 
 //});
-window.setTimeout(function () {
-    document.querySelector("#button" + index).setAttribute("class", "dunkel");
-    window.alert("kqengv");
-}, 2500);
 document.getElementById("start").addEventListener("click", function () {
     new Audio(song[0]).play(); //zu spielender erster Ton
     //button der das song[0] mp3 hat soll kurz leuchten --> .getAttribute("hell");
@@ -47,10 +30,10 @@ document.getElementById("start").addEventListener("click", function () {
     var start = ("#start");
     for (var index = 0; index < notRandomSong.length; index++) {
         if (song[i] == notRandomSong[index]) { //wenn Position aus random array mit Position aus mp3 array übereinstimmt, dann soll folgendes ausgeführt werden:
-            start = document.querySelector("#button" + index);
-            start.setAttribute("class", "hell"); //der button an der stelle index wird hell (also der "aktive" button)
-            //window.alert("knaf");
-            //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+            var start1 = document.querySelector("#button" + index);
+            start1.setAttribute("class", "hell"); //der button an der stelle index wird hell (also der "aktive" button)
+            //window.alert("knaf"); //wird angezeigt
+            //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX der button wird nie wieder dunkel außer man hat ein zweite mal draufgeklickt aber beim ersten mal iwie gar nicht omg
             window.setTimeout(function () {
                 document.querySelector("#button" + index).setAttribute("class", "dunkel");
                 window.alert("kqengv");
@@ -93,11 +76,13 @@ function ButtonFunktion(buttonname, samplename) {
             console.log("nächster zu erwartender Ton wäre: " + song[letzterSound]);
             // wenn richtig gespielt wurde spielen wir Array Sound mit einem weiteren neuen Ton (bis position c):
             // Taktgeber start 
-            var i = 0; //IN Math.floor(Math.random() * 10) GEÄNDERT STATT 0 - funktioniert aber nicht :------(
+            var i = 0;
             var taktgeber_1 = setInterval(function () {
                 // es wird abgespielt was der User bisher gespielt hatte:
                 var abgespielt = new Audio(song[i]);
                 abgespielt.play();
+                abgespielt.pause();
+                abgespielt.currentTime = 0;
                 for (var index = 0; index < notRandomSong.length; index++) {
                     if (song[i] == notRandomSong[index]) {
                         btn = document.querySelector("#button" + index);
@@ -110,12 +95,10 @@ function ButtonFunktion(buttonname, samplename) {
                 if (song[i] == song[letzterSound]) {
                     clearInterval(taktgeber_1);
                     // Gewinner: 
-                    if (song.length == playedSounds.length) {
-                        //var urlGewonnen: HTMLElement = document.getElementById("gewinnerLink");
-                        //window.location.href = "https://mariehoffm.github.io/EIA1-SoSe20/Endaufgabe/youWin/index.html";
+                    if (song.length == playedSounds.length) { //wenn der komplette song stimmt hat der spieler gewonnen und die seite wird dementsprechend geändert
                         var gewonnen = new Audio(winnerSound);
-                        gewonnen.play();
-                        gewonnenFenster();
+                        gewonnen.play(); // Gewinnermusik spielt
+                        gewonnenFenster(); //Aussehen ändert sich
                     }
                     playedSounds = [];
                     bisherigeTöne = 0;
@@ -125,11 +108,11 @@ function ButtonFunktion(buttonname, samplename) {
         }
         //Taktgeber ende
     }
-    else {
+    else { //wenn nicht, wurde das spiel verloren 
         var verloren = new Audio(looserTon);
-        verloren.play();
+        verloren.play(); // der Verlierersound kommt
         playedSounds = [];
-        verlorenFenster();
+        verlorenFenster(); //und das Fenster wird dementsprechend geändert
     } // ende von if (playedSounds[c] == song[c])
 } // ende von ButtonFunktion
 function gewonnenFenster() {
@@ -148,6 +131,7 @@ function gewonnenFenster() {
     btn5.remove();
     //winner.style.display = "block";
     document.getElementById("WinText").style.display = "block";
+    document.getElementById("nochmal").style.display = "block";
 }
 function verlorenFenster() {
     // diese Funktion sorg für das verschwinden aller Elemente die auf der Loose Seite nicht erscheinen sollen:
@@ -165,6 +149,7 @@ function verlorenFenster() {
     btn5.remove();
     //winner.style.display = "block";
     document.getElementById("LooseText").style.display = "block";
+    document.getElementById("nochmal").style.display = "block";
 }
 window.addEventListener("load", function () {
     var startButton = document.querySelector("#start");
@@ -200,6 +185,7 @@ window.addEventListener("load", function () {
     //Win und Loose soll nur angezeigt werden wenn gewonnen / verloren wurde
     document.getElementById("WinText").style.display = "none";
     document.getElementById("LooseText").style.display = "none";
+    document.getElementById("nochmal").style.display = "none";
     /*
     let winText: HTMLElement = document.getElementById("#WinText");
     window.alert("test1");

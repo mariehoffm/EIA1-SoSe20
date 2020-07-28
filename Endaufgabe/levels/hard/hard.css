@@ -3,6 +3,10 @@
     src: url(/font/RetroGaming.ttf);
 }
 
+#start{
+    font-family: Retro Gaming;
+}
+
 #Level{
     font-size: 30px;
 }
@@ -18,20 +22,123 @@ body{
 
 }
 
-
+/*
 .button{
-    background-color:red;
+    background-color: red;
     cursor: pointer;
     height: 50px;
     width: 200px;
     border-color: rgb(0, 0, 0);
+}
+*/
 
+#button0.dunkel{
+    background-color: purple;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
 }
 
-.button:hover {
-    background-color: rgb(223, 255, 44);
+#button0.hell{
+    background-color: lightblue;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
 }
+
+#button1.dunkel{
+    background-color: red;
+    animation-duration: 3s;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#button1.hell{
+    background-color: lightblue;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#button2.dunkel{
+    background-color: green;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#button2.hell{
+    background-color: lightblue;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+#button3.dunkel{
+    background-color: yellow;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#button3.hell{
+    background-color: lightblue;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+#button4.dunkel{
+    background-color: blue;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#button4.hell{
+    background-color: lightblue;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#start.hell{
+    background-color: lightblue;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+#start.dunkel{
+    background-color: pink;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-color: rgb(0, 0, 0);
+}
+
+
+
 
 #soundbuttons{
     padding: 50px;
+}
+
+#WinText{
+    font-size: 100px;
+}
+
+#LooseText{
+    font-size: 100px;
 }

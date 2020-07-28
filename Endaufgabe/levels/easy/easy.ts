@@ -2,7 +2,8 @@
 var playedSounds: string[] = [];
 var richtigGespielt: Boolean = false;
 
-var alleSamples: string[] = ["/sounds/sound_boing_2.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"];
+var alleSamples: string[] = ["/sounds/sound_boing_2.mp3", "/sounds/sound_boing.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"]; //ein array mit allen sounds
+
 
 var song: string[] = []; // dir Reihenfolge die abgespielt werden soll zum nachspielen
 var notRandomSong: string[] = ["/sounds/sound_boing.mp3", "/sounds/sound_boing_2.mp3", "/sounds/sound_kids_booo.mp3", "/sounds/sound_squeaking.mp3", "/sounds/sound_laugh.mp3"]; // damit die buttons immer einer mp3 zugeordnet werden können
@@ -19,42 +20,33 @@ for (let i: number = 0; i < 6; i++) {
 console.log(song);
 //notRandomSong = song; 
 
-var looserTon: string = "/sounds/looserSound.mp3";
-var winnerSound: string = "/sounds/winnerSound.mp3";
+var looserTon: string = "/sounds/looserSound.mp3"; //Verliererton wenn Spiel verloren
+var winnerSound: string = "/sounds/winnerSound.mp3"; //Gewinnerton wen Spiel gewonnen
 var letzterSound: number = 0; //Zähler für vom User gespielte Töne (Button Clickzähler)
-var bisherigeTöne: number = 0;
-//new Audio(song[0]).play(); 
-
-//window.addEventListener("load", function() { --> stattdessen start game button
-//erstmal den ersten Ton abspielen:
-//new Audio(song[0]).play(); 
-//});
+var bisherigeTöne: number = 0; 
 
 
 
-document.getElementById("start").addEventListener("click", function (): void {
+document.getElementById("start").addEventListener("click", function (): void { //funktion die ausgeführt wird wenn man auf den start button klickt
     new Audio(song[0]).play(); //zu spielender erster Ton
     //button der das song[0] mp3 hat soll kurz leuchten --> .getAttribute("hell");
     var i: number = 0;
     var start: string = ("#start");
-    for (var index: number = 0; index < notRandomSong.length; index++) {
+    for (var index: number = 0; index < notRandomSong.length; index++) { //solange index kleiner als die Länge aller Sounds wird die schleife ausgeführt
         if (song[i] == notRandomSong[index]) { //wenn Position aus random array mit Position aus mp3 array übereinstimmt, dann soll folgendes ausgeführt werden:
+            var thisindex: number = index;
             var start1: Element = document.querySelector("#button" + index);
             start1.setAttribute("class", "hell"); //der button an der stelle index wird hell (also der "aktive" button)
             //window.alert("knaf"); //wird angezeigt
-//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX der button wird nie wieder dunkel außer man hat ein zweite mal draufgeklickt aber beim ersten mal iwie gar nicht omg
             window.setTimeout(function (): void {
-                document.querySelector("#button" + index).setAttribute("class", "dunkel");
-                window.alert("kqengv");
-            },                2500);
+                document.querySelector("#button" + thisindex).setAttribute("class", "dunkel"); //der aktuelle button wird hellblau
+            },                1500);
     }
         
 }});
 
 
 //Ton soll abgespielt werden wenn auf den entsprechenden button geklickt wird
-//erster Ton - boing
-//document.querySelector("#playbutton").addEventListener("click", function() {DrumMachine(Lied01,4);});
 document.querySelector("#button0").addEventListener("click", function (): void { ButtonFunktion("button0", notRandomSong[0]); });
 document.querySelector("#button1").addEventListener("click", function (): void { ButtonFunktion("button1", notRandomSong[1]); });
 document.querySelector("#button2").addEventListener("click", function (): void { ButtonFunktion("button2", notRandomSong[2]); });
@@ -65,12 +57,12 @@ document.querySelector("#button4").addEventListener("click", function (): void {
 
 
 
-function ButtonFunktion(buttonname: string, samplename: string): void {
+function ButtonFunktion(buttonname: string, samplename: string): void { //Funktion der einzelnen Buttons
 
     buttonname = "#" + buttonname;
     console.log("ich bin in funktion" + " Button: " + buttonname + " sample: " + samplename);
 
-    var gedrueckterButton: HTMLAudioElement = new Audio(samplename);
+    var gedrueckterButton: HTMLAudioElement = new Audio(samplename); //der ton des Buttons der vom SPieler geklickt wird wird gespielt
     gedrueckterButton.play();
 
 
@@ -81,7 +73,7 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
     if (btn.getAttribute("class") != "hell") {// wenn der Button beim Laden der Seite nicht die Klasse dunkel hat, dann bekommt er sie jetzt
         btn.setAttribute("class", "hell"); // button1.dunkel
     }
-    setTimeout(function (): void { btn.setAttribute("class", "dunkel"); }, 2000);
+    setTimeout(function (): void { btn.setAttribute("class", "dunkel"); }, 1500); //funktioniert nicht beim ersten bzw letzten button
     //Design
  
 
@@ -108,18 +100,18 @@ function ButtonFunktion(buttonname: string, samplename: string): void {
 
                 var abgespielt: HTMLAudioElement = new Audio(song[i]);
                 abgespielt.play();
-                abgespielt.pause();
-                abgespielt.currentTime = 0;
+                
 
-                for (var index: number = 0; index < notRandomSong.length; index++) {
+                for (var index: number = 0; index < notRandomSong.length; index++) { //hier wird der button hellblau gemacht wenn der ton spielt und dunkel wenn nicht
                     if (song[i] == notRandomSong[index]) {
-                        btn = document.querySelector("#button" + index);
+                        var aktuellerindex: number = index;
+                        btn = document.querySelector("#button" + aktuellerindex);
                         btn.setAttribute("class", "hell");
                         setTimeout(function (): void {
-                            document.querySelector("#button" + index).setAttribute("class", "dunkel");
-                        },         2500);
+                            document.querySelector("#button" + aktuellerindex).setAttribute("class", "dunkel");
+                        },         1500);
  
-                    }  
+                    }
                 }
 
 
@@ -194,7 +186,7 @@ function verlorenFenster(): void {
     btn5.remove();
     //winner.style.display = "block";
     document.getElementById("LooseText").style.display = "block";
-            document.getElementById("nochmal").style.display = "block";
+    document.getElementById("nochmal").style.display = "block";
 
 
 } 
@@ -239,35 +231,4 @@ window.addEventListener("load", function (): void {
     document.getElementById("LooseText").style.display = "none";
     document.getElementById("nochmal").style.display = "none";
 
-
-    /*
-    let winText: HTMLElement = document.getElementById("#WinText"); 
-    window.alert("test1");
-    winText.style.display = "none";
-    window.alert("test2"); //wird nicht ausgegeben
-
-    let looseText: HTMLElement = document.getElementById("#LooseText");
-    looseText.style.display = "none";
-    */
-
-    
-
-
-
-
-
-
 }); //ende eventlistener load
-
-//wenn geklickt wurde das ausführen:
-/*
-if (song[0] == playedSounds[0]) { // dann wenn der gleiche ton gespielt wurde nächster Ton usw
-    var w: number = 0;
-    var playsong2: HTMLAudioElement = new Audio (song[w]);
-    playsong2.play();
-    ++w;
-} // funktioniert NOCH nicht
-*/
-//gespielte Töne mit randomArray vergleichen --> richtig ? weiter / falsch? youLoose / nach 5 TÖnen immernoch richtig? youWin
-
-//halloooo

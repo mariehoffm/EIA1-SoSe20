@@ -19,6 +19,8 @@
 body{
     background-color: lightgoldenrodyellow;
     font-family: Retro Gaming;
+    text-align: center;
+
 
 }
 
@@ -41,7 +43,7 @@ body{
 }
 
 #button0.hell{
-    background-color: lightblue;
+    background-color: lightpink;
     transition-duration: 0.4s;
     cursor: pointer;
     height: 50px;
@@ -59,7 +61,7 @@ body{
 }
 
 #button1.hell{
-    background-color: lightblue;
+    background-color: lightpink;
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -75,7 +77,7 @@ body{
 }
 
 #button2.hell{
-    background-color: lightblue;
+    background-color: lightpink;
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -90,7 +92,7 @@ body{
 }
 
 #button3.hell{
-    background-color: lightblue;
+    background-color: lightpink;
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -105,7 +107,7 @@ body{
 }
 
 #button4.hell{
-    background-color: lightblue;
+    background-color: lightpink;
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -113,7 +115,7 @@ body{
 }
 
 #start.hell{
-    background-color: lightblue;
+    background-color: lightpink;
     cursor: pointer;
     height: 50px;
     width: 200px;
